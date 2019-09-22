@@ -4,7 +4,7 @@ Framework for testing RESTful Services with RestSharp and C# HTTP Client
 
 ## Course Link (Discount Coupon)
 
-<Coming Soon..>
+Coming Soon..
 
 ## YouTube Playlist
 
