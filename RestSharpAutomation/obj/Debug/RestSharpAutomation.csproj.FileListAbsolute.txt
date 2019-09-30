@@ -1,0 +1,15 @@
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\RestSharpAutomation.dll
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\RestSharpAutomation.pdb
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\RestSharp.dll
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\bin\Debug\RestSharp.xml
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\obj\Debug\RestSharpAutomation.csprojAssemblyReference.cache
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\obj\Debug\RestSharpAutomation.csproj.CopyComplete
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\obj\Debug\RestSharpAutomation.dll
+C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\obj\Debug\RestSharpAutomation.pdb

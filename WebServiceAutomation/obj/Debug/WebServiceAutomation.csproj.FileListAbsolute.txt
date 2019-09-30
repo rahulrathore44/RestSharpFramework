@@ -24,7 +24,7 @@ C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\bin\Debug
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\bin\Debug\Newtonsoft.Json.xml
-C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\obj\Debug\WebServiceAutomation.csproj.CoreCompileInputs.cache
+C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\obj\Debug\WebServiceAutomation.csprojAssemblyReference.cache
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\obj\Debug\WebServiceAutomation.csproj.CopyComplete
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\obj\Debug\WebServiceAutomation.dll
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\obj\Debug\WebServiceAutomation.pdb

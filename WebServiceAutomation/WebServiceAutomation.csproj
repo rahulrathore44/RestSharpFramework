@@ -96,7 +96,7 @@
     <Compile Include="DeleteEndPoint\TestDeleteEndPoint.cs" />
     <Compile Include="GetEndPoint\TestGetEndPoint.cs" />
     <Compile Include="Helper\Authetication\Base64StringConverter.cs" />
-    <Compile Include="Helper\Request\HttpAsyncClientHelper.cs" />
+    <Compile Include="Helper\Request\HttpClientAsyncHelper.cs" />
     <Compile Include="Helper\Request\HttpClientHelper.cs" />
     <Compile Include="Helper\Response\ResponseDataHelper.cs" />
     <Compile Include="Model\JsonModel\Features.cs" />
@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Testrun.runsettings" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
