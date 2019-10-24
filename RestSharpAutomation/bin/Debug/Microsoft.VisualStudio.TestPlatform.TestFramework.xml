@@ -280,11 +280,6 @@
             Attribute to define inline data for a test method.
             </summary>
         </member>
-        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute"/> class.
-            </summary>
-        </member>
         <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute.#ctor(System.Object)">
             <summary>
             Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute"/> class.
@@ -3754,11 +3749,6 @@
               Looks up a localized string similar to Method {0} must match the expected signature: public static {1} {0}({2})..
             </summary>
         </member>
-        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.FrameworkMessages.DynamicDataIEnumerableEmpty">
-            <summary>
-              Looks up a localized string similar to Property or method {0} on {1} returns empty IEnumerable&lt;object[]&gt;..
-            </summary>
-        </member>
         <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.FrameworkMessages.DynamicDataIEnumerableNull">
             <summary>
               Looks up a localized string similar to Property or method {0} on {1} does not return IEnumerable&lt;object[]&gt;..
@@ -3995,24 +3985,6 @@
             The infinite.
             </summary>
         </member>
-        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.InheritanceBehavior">
-            <summary>
-            Enumeration for inheritance behavior, that can be used with both the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute"/> class
-            and <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute"/> class.
-            Defines the behavior of the ClassInitialize and ClassCleanup methods of base classes.
-            The type of the enumeration must match
-            </summary>
-        </member>
-        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.InheritanceBehavior.None">
-            <summary>
-            None.
-            </summary>
-        </member>
-        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.InheritanceBehavior.BeforeEachDerivedClass">
-            <summary>
-            Before each derived class.
-            </summary>
-        </member>
         <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute">
             <summary>
             The test class attribute.
@@ -4108,49 +4080,9 @@
             The class initialize attribute.
             </summary>
         </member>
-        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute"/> class.
-            ClassInitializeAttribute
-            </summary>
-        </member>
-        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.InheritanceBehavior)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute"/> class.
-            ClassInitializeAttribute
-            </summary>
-            <param name="inheritanceBehavior">
-            Specifies the ClassInitialize Inheritance Behavior
-            </param>
-        </member>
-        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute.InheritanceBehavior">
-            <summary>
-            Gets the Inheritance Behavior
-            </summary>
-        </member>
         <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute">
             <summary>
             The class cleanup attribute.
-            </summary>
-        </member>
-        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute"/> class.
-            ClassCleanupAttribute
-            </summary>
-        </member>
-        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.InheritanceBehavior)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute"/> class.
-            ClassCleanupAttribute
-            </summary>
-            <param name="inheritanceBehavior">
-            Specifies the ClassCleanup Inheritance Behavior
-            </param>
-        </member>
-        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute.InheritanceBehavior">
-            <summary>
-            Gets the Inheritance Behavior
             </summary>
         </member>
         <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyInitializeAttribute">
