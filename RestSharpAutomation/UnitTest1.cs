@@ -8,12 +8,19 @@ namespace RestSharpAutomation
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod111()
+        public void TestMethod1()
         {
-            RestClient restClient = new RestClient();
-            RestRequest restRequest = new RestRequest("http://localhost:8080/laptop-bag/webapi/api/all", Method.GET);
-            IRestResponse restResponse =  restClient.Get(restRequest);
-            Console.WriteLine(restResponse.Content);
+
+            /**
+             1. Create the Client
+             2. Create the Request
+             3. Send the request using the client
+             4. Capture the respose
+             */
+
+            IRestClient restClient = new RestClient();
+            IRestRequest restRequest = new RestRequest();
+            
         }
     }
 }

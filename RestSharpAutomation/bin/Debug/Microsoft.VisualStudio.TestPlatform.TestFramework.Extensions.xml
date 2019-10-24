@@ -991,11 +991,6 @@
             Gets test properties for a test.
             </summary>
         </member>
-        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.CancellationTokenSource">
-            <summary>
-            Gets or sets the cancellation token source. This token source is cancelled when test timesout. Also when explicitly cancelled the test will be aborted
-            </summary>
-        </member>
         <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow">
             <summary>
             Gets the current data row when test is used for data driven testing.
