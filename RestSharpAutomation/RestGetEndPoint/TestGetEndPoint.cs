@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
+using RestSharpAutomation.HelperClass.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,7 +88,7 @@ namespace RestSharpAutomation.RestGetEndPoint
                 });
 
                 Assert.AreEqual("Alienware M17", jsonRootObject.LaptopName);
-                Assert.IsTrue(jsonRootObject.Features.Feature.Contains("8th Generation Intel® Core™ i5-8300H"), "Element is not Present");
+                Assert.IsTrue(jsonRootObject.Features.Feature.Contains("Windows 10 Home 64 - bit English"), "Element is not Present");
 
             }
             else
@@ -124,7 +125,7 @@ namespace RestSharpAutomation.RestGetEndPoint
                 });
 
                 Assert.AreEqual("Alienware M17", laptop.LaptopName);
-                Assert.IsTrue(laptop.Features.Feature.Contains("8th Generation Intel® Core™ i5-8300H"), "Element is not Present");
+                Assert.IsTrue(laptop.Features.Feature.Contains("Windows 10 Home 64 - bit English"), "Element is not Present");
             }
             else
             {
@@ -151,5 +152,44 @@ namespace RestSharpAutomation.RestGetEndPoint
             Assert.IsNotNull(restResponse.Data, "Response is null");
         }
         
+        [TestMethod]
+        public void TestGetWithXMLUsingHelperClass()
+        {
+            Dictionary<string, string> headers = new Dictionary<string, string>()
+            {
+                {"Accept", "application/xml" }
+            };
+
+            RestClientHelper restClientHelper = new RestClientHelper();
+            IRestResponse restResponse = restClientHelper.PerformGetRequest(getUrl, headers);
+            Assert.AreEqual(200, (int)restResponse.StatusCode);
+            Assert.IsNotNull(restResponse.Content, "Content is Null/Empty");
+
+            IRestResponse<LaptopDetailss>  restResponse1 = restClientHelper.PerformGetRequest<LaptopDetailss>(getUrl, headers);
+            Assert.AreEqual(200, (int)restResponse.StatusCode);
+            Assert.IsNotNull(restResponse1.Data, "Content is Null/Empty");
+
+        }
+
+        [TestMethod]
+        public void TestGetWithJsonUsingHelperClass()
+        {
+            Dictionary<string, string> headers = new Dictionary<string, string>()
+            {
+                {"Accept", "application/json" }
+            };
+
+            RestClientHelper restClientHelper = new RestClientHelper();
+            IRestResponse restResponse = restClientHelper.PerformGetRequest(getUrl, headers);
+            Assert.AreEqual(200, (int)restResponse.StatusCode);
+            Assert.IsNotNull(restResponse.Content, "Content is Null/Empty");
+
+            IRestResponse<List<Laptop>> restResponse1 = restClientHelper.PerformGetRequest<List<Laptop>>(getUrl, headers);
+            Assert.AreEqual(200, (int)restResponse.StatusCode);
+            Assert.IsNotNull(restResponse1.Data, "Content is Null/Empty");
+
+        }
+
+
     }
 }

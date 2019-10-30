@@ -51,9 +51,12 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelperClass\Request\RestClientHelper.cs" />
     <Compile Include="RestGetEndPoint\TestGetEndPoint.cs" />
+    <Compile Include="RestPostEndpoint\TestPostEndPoint.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
