@@ -355,7 +355,7 @@ namespace WebServiceAutomation.GetEndPoint
                         Assert.IsNotNull(restResponse.ResponseContent);
 
                         //3rd Assertion
-                        Assert.IsTrue(xmlData.Laptop[0].Features.Feature.Contains("Windows 10 Home 64-bit English"), "ITem not found");
+                        Assert.IsTrue(xmlData.Laptop[0].Features.Feature.Contains("Windows 10 Home 64 - bit English"), "ITem not found");
 
                         //4th
                         Assert.AreEqual("Alienware", xmlData.Laptop[0].BrandName);
