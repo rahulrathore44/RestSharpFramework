@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
+using RestSharp.Authenticators;
 using RestSharpAutomation.HelperClass.Request;
 using System;
 using System.Collections.Generic;
@@ -196,7 +197,31 @@ namespace RestSharpAutomation.RestPostEndpoint
             Assert.AreEqual(200, (int)response.StatusCode);
             Assert.IsNotNull(response.Data, "Response Content is Null");
         }
-        
+
+        [TestMethod]
+        public void TestVideoUpload()
+        {
+            IRestClient client = new RestClient();
+            IRestRequest request = new RestRequest()
+            {
+                Resource = "https://www.googleapis.com/upload/youtube/v3/videos"
+            };
+
+            request.AddHeader("Content-Type", "video/*");
+            request.AddHeader("client_id", "667364117050-vgsva9q8q7ktpai4209krrjqcr43eki8.apps.googleusercontent.com");
+            request.AddHeader("client_secret", "7b-i7OurFnTlmogBqrnf3pbg");
+            request.AddFile("video", @"C:\Users\rathr1\Downloads\upload.mp4", "video/*");
+
+            request.AddParameter("snippet.title", "Testing", ParameterType.RequestBody);
+            request.AddParameter("snippet.description", "Testing Description", ParameterType.RequestBody);
+            request.AddParameter("snippet.categoryId", "22", ParameterType.RequestBody);
+            request.AddParameter("status.privacyStatus", "public", ParameterType.RequestBody);
+
+            IRestResponse restResponse =  client.Post(request);
+            Console.WriteLine(restResponse.StatusCode);
+            Console.WriteLine(restResponse.Content);
+            Assert.AreEqual("OK", restResponse.StatusCode);
+        }
 
     }
 }
