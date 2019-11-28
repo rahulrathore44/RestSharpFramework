@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
+using RestSharp.Authenticators;
 using RestSharpAutomation.HelperClass.Request;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace RestSharpAutomation.RestGetEndPoint
     public class TestGetEndPoint
     {
         private string getUrl = "http://localhost:8080/laptop-bag/webapi/api/all";
+        private string secureGet = "http://localhost:8080/laptop-bag/webapi/secure/all";
 
         [TestMethod]
         public void TestGetUsingRestSharp()
@@ -87,7 +89,7 @@ namespace RestSharpAutomation.RestGetEndPoint
                     return x.Id == 1;
                 });
 
-                Assert.AreEqual("Alienware M17", jsonRootObject.LaptopName);
+                Assert.AreEqual("Alienware M17", jsonRootObject?.LaptopName);
                 Assert.IsTrue(jsonRootObject.Features.Feature.Contains("Windows 10 Home 64 - bit English"), "Element is not Present");
 
             }
@@ -124,7 +126,7 @@ namespace RestSharpAutomation.RestGetEndPoint
                     return x.Id.Equals("1", StringComparison.OrdinalIgnoreCase);
                 });
 
-                Assert.AreEqual("Alienware M17", laptop.LaptopName);
+                Assert.AreEqual("Alienware M17", laptop?.LaptopName);
                 Assert.IsTrue(laptop.Features.Feature.Contains("Windows 10 Home 64 - bit English"), "Element is not Present");
             }
             else
@@ -189,7 +191,19 @@ namespace RestSharpAutomation.RestGetEndPoint
             Assert.IsNotNull(restResponse1.Data, "Content is Null/Empty");
 
         }
+            
+        [TestMethod]
+        public void TestSecureGet()
+        {
+            IRestClient client = new RestClient();
+            client.Authenticator = new HttpBasicAuthenticator("admin", "welcome");
+            IRestRequest request = new RestRequest()
+            {
+                Resource = secureGet
+            };
 
-
+            IRestResponse response = client.Get(request);
+            Assert.AreEqual(200, (int)response.StatusCode);
+        }
     }
 }

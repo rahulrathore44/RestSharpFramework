@@ -54,9 +54,26 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DropBoxAPI\ListFolderModel\Entry.cs" />
+    <Compile Include="DropBoxAPI\ListFolderModel\Field.cs" />
+    <Compile Include="DropBoxAPI\ListFolderModel\PropertyGroup.cs" />
+    <Compile Include="DropBoxAPI\ListFolderModel\RootObject.cs" />
+    <Compile Include="DropBoxAPI\ListFolderModel\SharingInfo.cs" />
+    <Compile Include="DropBoxAPI\TestDropBoxAPI.cs" />
+    <Compile Include="DropBoxAPI\TestGenerateToken.cs" />
     <Compile Include="HelperClass\Request\RestClientHelper.cs" />
+    <Compile Include="JiraAPI\Request\CreateProjectPayload.cs" />
+    <Compile Include="JiraAPI\Request\JiraLogin.cs" />
+    <Compile Include="JiraAPI\Response\CreateProjectResponse.cs" />
+    <Compile Include="JiraAPI\Response\LoginInfo.cs" />
+    <Compile Include="JiraAPI\Response\LoginResponse.cs" />
+    <Compile Include="JiraAPI\Response\Session.cs" />
+    <Compile Include="JiraAPI\TestJiraAPI.cs" />
+    <Compile Include="JiraAPI\TestJiraEndToEndFlow.cs" />
+    <Compile Include="RestDeleteEndpoint\TestDeleteEndPoint.cs" />
     <Compile Include="RestGetEndPoint\TestGetEndPoint.cs" />
     <Compile Include="RestPostEndpoint\TestPostEndPoint.cs" />
+    <Compile Include="RestPutEndPoint\TestPutEndPoint.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,6 +86,7 @@
       <Name>WebServiceAutomation</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
