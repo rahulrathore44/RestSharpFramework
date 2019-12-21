@@ -70,6 +70,7 @@
     <Compile Include="JiraAPI\Response\Session.cs" />
     <Compile Include="JiraAPI\TestJiraAPI.cs" />
     <Compile Include="JiraAPI\TestJiraEndToEndFlow.cs" />
+    <Compile Include="QueryParameter\QueryParameter.cs" />
     <Compile Include="RestDeleteEndpoint\TestDeleteEndPoint.cs" />
     <Compile Include="RestGetEndPoint\TestGetEndPoint.cs" />
     <Compile Include="RestPostEndpoint\TestPostEndPoint.cs" />
