@@ -4,7 +4,7 @@ Framework for testing RESTful Services with RestSharp and C# HTTP Client
 
 ## Course Link (Discount Coupon)
 
-Coming Soon..
+https://www.udemy.com/course/rest-api-automation-with-restsharp-http-client/
 
 ## YouTube Playlist
 
