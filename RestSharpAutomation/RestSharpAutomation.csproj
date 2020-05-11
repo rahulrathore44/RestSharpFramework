@@ -75,6 +75,7 @@
     <Compile Include="JiraAPI\TestJiraAPI.cs" />
     <Compile Include="JiraAPI\TestJiraEndToEndFlow.cs" />
     <Compile Include="QueryParameter\QueryParameter.cs" />
+    <Compile Include="Question\FileUpload\FileUpload.cs" />
     <Compile Include="Question\Model\AccessorialMarkup.cs" />
     <Compile Include="Question\Model\LdiMarkups.cs" />
     <Compile Include="Question\Model\MarginProfile.cs" />

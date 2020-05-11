@@ -35,10 +35,11 @@ namespace RestSharpAutomation.CustomSerializer
                 jsonObject.Remove("mileMarkups");
 
                 JObject mileMarkups = new JObject();
-                foreach (MileMarkups mile in marginProfile.mileMarkups)
+                marginProfile.mileMarkups.ForEach(mile =>
                 {
                     mileMarkups.Add(new JProperty(mile.MileStart.ToString(), mile.Markup));
-                }
+                });
+
                 jsonObject.Add("mileMarkups", mileMarkups);
 
                 serializeString = jsonObject.ToString(Newtonsoft.Json.Formatting.None);
