@@ -80,9 +80,11 @@
     <Compile Include="Question\Model\LdiMarkups.cs" />
     <Compile Include="Question\Model\MarginProfile.cs" />
     <Compile Include="Question\Model\MileMarkups.cs" />
+    <Compile Include="Question\PostFormData\TestFormData.cs" />
     <Compile Include="Question\Post\PostRequest.cs" />
     <Compile Include="RestDeleteEndpoint\TestDeleteEndPoint.cs" />
     <Compile Include="RestGetEndPoint\TestGetEndPoint.cs" />
+    <Compile Include="RestPostEndpoint\FileUploadEndPoint.cs" />
     <Compile Include="RestPostEndpoint\TestPostEndPoint.cs" />
     <Compile Include="RestPutEndPoint\TestPutEndPoint.cs" />
     <Compile Include="UnitTest1.cs" />
