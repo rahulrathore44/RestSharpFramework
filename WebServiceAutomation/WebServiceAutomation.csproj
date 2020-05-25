@@ -109,6 +109,7 @@
     <Compile Include="ParallelExecution\TestParallelExecution.cs" />
     <Compile Include="PostEndPoint\TestPostEndPoint.cs" />
     <Compile Include="PutEndPoint\TestPutEndPoint.cs" />
+    <Compile Include="Question\TestNestedJson.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
