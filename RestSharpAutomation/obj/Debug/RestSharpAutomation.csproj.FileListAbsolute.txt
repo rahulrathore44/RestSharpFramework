@@ -24,14 +24,14 @@ C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\RestSharpAutomat
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\RestSharpAutomation.pdb
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Newtonsoft.Json.dll
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\RestSharp.dll
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\WebServiceAutomation.dll
-C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Newtonsoft.Json.dll
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\WebServiceAutomation.pdb
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\RestSharp.xml
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Newtonsoft.Json.xml
+C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\RestSharp.xml
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.csprojAssemblyReference.cache
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.csproj.CopyComplete
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.dll

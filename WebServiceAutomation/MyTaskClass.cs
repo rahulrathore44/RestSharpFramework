@@ -14,7 +14,7 @@ namespace WebServiceAutomation
     //[TestClass]
     public class MyTaskClass
     {
-        private string postUrl = "http://localhost:8080/laptop-bag/webapi/api/add";
+        private string postUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/add";
         private string xmlMediaType = "application/xml";
         private Dictionary<string, string> headers = new Dictionary<string, string>()
             {
@@ -26,7 +26,7 @@ namespace WebServiceAutomation
         {
             Task<RestResponse> t1 = Task.Factory.StartNew<RestResponse>(() =>
             {
-                return HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/all", headers);
+                return HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all", headers);
             });
 
             var task = Task.Factory.StartNew<Laptop>(() =>
@@ -38,7 +38,7 @@ namespace WebServiceAutomation
             }, TaskCreationOptions.LongRunning).ContinueWith((restResponse) =>
             {
                 string id = restResponse.Result.Id;
-                RestResponse rs = HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/find/" + id, headers);
+                RestResponse rs = HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/find/" + id, headers);
                 Assert.AreEqual(200, rs.StatusCode);
                 Console.WriteLine("Done");
             }, TaskContinuationOptions.OnlyOnRanToCompletion);

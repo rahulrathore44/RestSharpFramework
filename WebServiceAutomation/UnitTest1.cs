@@ -20,7 +20,7 @@ namespace WebServiceAutomation
         {
             // Step 1. To create Http Client
             HttpClient httpClient = new HttpClient();
-            string getUrl = "http://localhost:8080/laptop-bag/webapi/api/all";
+            string getUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/all";
             httpClient.Dispose(); // Close the connection and release the resource
 
         }
@@ -43,7 +43,7 @@ namespace WebServiceAutomation
         {
 
                 HttpClient httpClient = new HttpClient();
-                HttpResponseMessage response = await httpClient.GetAsync("http://localhost:8080/laptop-bag/webapi/delay/all");
+                HttpResponseMessage response = await httpClient.GetAsync("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all");
             response.EnsureSuccessStatusCode();
             string content = await response.Content.ReadAsStringAsync();
             return content;
@@ -61,7 +61,7 @@ namespace WebServiceAutomation
         {
 
             HttpClient httpClient = new HttpClient();
-            HttpResponseMessage response = await httpClient.GetAsync("http://localhost:8080/laptop-bag/webapi/delay/all");
+            HttpResponseMessage response = await httpClient.GetAsync("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all");
             response.EnsureSuccessStatusCode();
             string content = await response.Content.ReadAsStringAsync();
             return content;
@@ -83,7 +83,7 @@ namespace WebServiceAutomation
         {
             await Task.Run(() =>
             {
-                HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/all", null);
+                HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all", null);
             });
         }
 
@@ -92,7 +92,7 @@ namespace WebServiceAutomation
         {
             await Task.Run(() =>
             {
-                HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/all", null);
+                HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all", null);
             });
         }
 
@@ -129,7 +129,7 @@ namespace WebServiceAutomation
             };
             return new Action(() =>
             {
-                RestResponse restResponse = HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/all", httpHeader);
+                RestResponse restResponse = HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all", httpHeader);
                 Assert.AreEqual(200, restResponse.StatusCode);
             });
         }

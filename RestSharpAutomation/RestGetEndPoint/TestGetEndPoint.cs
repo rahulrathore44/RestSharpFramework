@@ -15,8 +15,8 @@ namespace RestSharpAutomation.RestGetEndPoint
     [TestClass]
     public class TestGetEndPoint
     {
-        private string getUrl = "http://localhost:8080/laptop-bag/webapi/api/all";
-        private string secureGet = "http://localhost:8080/laptop-bag/webapi/secure/all";
+        private string getUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/all";
+        private string secureGet = "https://laptopbag.herokuapp.com/laptop-bag/webapi/secure/all";
 
         [TestMethod]
         public void TestGetUsingRestSharp()
