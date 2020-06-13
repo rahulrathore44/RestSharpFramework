@@ -11,7 +11,7 @@ namespace RestSharpAutomation.RestPostEndpoint
     [TestClass]
     public class TestPostEndPoint
     {
-        private string postUrl = "http://localhost:8080/laptop-bag/webapi/api/add";
+        private string postUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/add";
         private Random random = new Random();
 
         [TestMethod]

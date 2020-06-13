@@ -74,6 +74,8 @@
     <Compile Include="JiraAPI\Response\Session.cs" />
     <Compile Include="JiraAPI\TestJiraAPI.cs" />
     <Compile Include="JiraAPI\TestJiraEndToEndFlow.cs" />
+    <Compile Include="Jwt Token\Model\JwtToken.cs" />
+    <Compile Include="Jwt Token\TestJwtToken.cs" />
     <Compile Include="QueryParameter\QueryParameter.cs" />
     <Compile Include="Question\FileUpload\FileUpload.cs" />
     <Compile Include="Question\Model\AccessorialMarkup.cs" />

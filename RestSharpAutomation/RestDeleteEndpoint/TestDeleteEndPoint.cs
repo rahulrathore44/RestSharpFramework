@@ -13,8 +13,8 @@ namespace RestSharpAutomation.RestDeleteEndpoint
     [TestClass]
     public class TestDeleteEndPoint
     {
-        private string postUrl = "http://localhost:8080/laptop-bag/webapi/api/add";
-        private string deleteEndPoint = "http://localhost:8080/laptop-bag/webapi/api/delete/";
+        private string postUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/add";
+        private string deleteEndPoint = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/delete/";
         private Random random = new Random();
 
         /*
