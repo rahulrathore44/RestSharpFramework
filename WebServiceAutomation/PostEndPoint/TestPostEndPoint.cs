@@ -21,10 +21,10 @@ namespace WebServiceAutomation.PostEndPoint
     [TestClass]
     public class TestPostEndPoint
     {
-        private string postUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/add";
-        private string getUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/find/";
-        private string secureGetUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/secure/find/";
-        private string securePostUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/secure/add";
+        private string postUrl = "http://localhost:8080/laptop-bag/webapi/api/add";
+        private string getUrl = "http://localhost:8080/laptop-bag/webapi/api/find/";
+        private string secureGetUrl = "http://localhost:8080/laptop-bag/webapi/secure/find/";
+        private string securePostUrl = "http://localhost:8080/laptop-bag/webapi/secure/add";
         private RestResponse restResponse;
         private RestResponse restResponseForGet;
         private string jsonMediaType = "application/json";

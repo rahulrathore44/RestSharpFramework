@@ -12,8 +12,7 @@ namespace RestSharpAutomation.QueryParameter
     [TestClass]
     public class QueryParameter
     {
-        //private string searchUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/query";
-        private string searchUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/query";
+        private string searchUrl = "http://localhost:8080/laptop-bag/webapi/api/query";
 
         [TestMethod]
         public void TestQueryParameter()

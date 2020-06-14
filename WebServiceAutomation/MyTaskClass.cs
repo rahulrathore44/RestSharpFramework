@@ -14,7 +14,7 @@ namespace WebServiceAutomation
     //[TestClass]
     public class MyTaskClass
     {
-        private string postUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/add";
+        private string postUrl = "http://localhost:8080/laptop-bag/webapi/api/add";
         private string xmlMediaType = "application/xml";
         private Dictionary<string, string> headers = new Dictionary<string, string>()
             {

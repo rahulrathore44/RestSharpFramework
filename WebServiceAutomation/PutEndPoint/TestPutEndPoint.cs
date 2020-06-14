@@ -21,12 +21,12 @@ namespace WebServiceAutomation.PutEndPoint
         // Put to update the record
         // Get using the Id fetch the record and add the validation
 
-        private string postUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/add";
-        private string getUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/find/";
-        private string putUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/update";
-        private string secureGetUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/secure/find/";
-        private string securePutUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/secure/update";
-        private string securePostUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/secure/add";
+        private string postUrl = "http://localhost:8080/laptop-bag/webapi/api/add";
+        private string getUrl = "http://localhost:8080/laptop-bag/webapi/api/find/";
+        private string putUrl = "http://localhost:8080/laptop-bag/webapi/api/update";
+        private string secureGetUrl = "http://localhost:8080/laptop-bag/webapi/secure/find/";
+        private string securePutUrl = "http://localhost:8080/laptop-bag/webapi/secure/update";
+        private string securePostUrl = "http://localhost:8080/laptop-bag/webapi/secure/add";
         private RestResponse restResponse;
         private string jsonMediaType = "application/json";
         private string xmlMediaType = "application/xml";

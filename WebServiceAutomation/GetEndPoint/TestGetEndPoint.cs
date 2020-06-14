@@ -21,9 +21,9 @@ namespace WebServiceAutomation.GetEndPoint
     [TestClass]
     public class TestGetEndPoint
     {
-        private string getUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/api/all";
-        private string secureGetUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/secure/all";
-        private string delayget = "https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all";
+        private string getUrl = "http://localhost:8080/laptop-bag/webapi/api/all";
+        private string secureGetUrl = "http://localhost:8080/laptop-bag/webapi/secure/all";
+        private string delayget = "http://localhost:8080/laptop-bag/webapi/delay/all";
 
 
         [TestMethod]
@@ -414,13 +414,13 @@ namespace WebServiceAutomation.GetEndPoint
         public void TestGetEndpoint_Sync()
         {
             // Stmt 1 
-            HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all", null);
+            HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/all", null);
             // Stmt 2
-            HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all", null);
+            HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/all", null);
             // Stmt 3
-            HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all", null);
+            HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/all", null);
             // Stmt 4
-            HttpClientHelper.PerformGetRequest("https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all", null);
+            HttpClientHelper.PerformGetRequest("http://localhost:8080/laptop-bag/webapi/delay/all", null);
         }
 
         [TestMethod]
