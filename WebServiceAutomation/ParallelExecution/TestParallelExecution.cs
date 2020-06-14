@@ -15,10 +15,10 @@ namespace WebServiceAutomation.ParallelExecution
     [TestClass]
     public class TestParallelExecution
     {
-        private string delayGetUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/all";
-        private string delayGetWithId = "https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/find/";
-        private string delayPostUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/add";
-        private string delayPutUrl = "https://laptopbag.herokuapp.com/laptop-bag/webapi/delay/update";
+        private string delayGetUrl = "http://localhost:8080/laptop-bag/webapi/delay/all";
+        private string delayGetWithId = "http://localhost:8080/laptop-bag/webapi/delay/find/";
+        private string delayPostUrl = "http://localhost:8080/laptop-bag/webapi/delay/add";
+        private string delayPutUrl = "http://localhost:8080/laptop-bag/webapi/delay/update";
         private string xmlMediaType = "application/xml";
         private Random random = new Random();
         private HttpClientAsyncHelper httpClientAsyncHelper = new HttpClientAsyncHelper();
