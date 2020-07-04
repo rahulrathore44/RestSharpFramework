@@ -1,9 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using JsonAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
 using RestSharp.Authenticators;
 using RestSharpAutomation.HelperClass.Request;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -191,7 +193,31 @@ namespace RestSharpAutomation.RestGetEndPoint
             Assert.IsNotNull(restResponse1.Data, "Content is Null/Empty");
 
         }
-            
+
+        [TestMethod]
+        public void TestGetAndAssertLongJson()
+        {
+            Dictionary<string, string> headers = new Dictionary<string, string>()
+            {
+                {"Accept", "application/json" }
+            };
+
+            RestClientHelper restClientHelper = new RestClientHelper();
+            string getUrl = "http://localhost:1082/laptop-bag/webapi/api/all";
+            IRestResponse restResponse = restClientHelper.PerformGetRequest(getUrl, headers);
+            Assert.AreEqual(200, (int)restResponse.StatusCode);
+            Assert.IsNotNull(restResponse.Content, "Content is Null/Empty");
+
+            IRestResponse<List<Laptop>> restResponse1 = restClientHelper.PerformGetRequest<List<Laptop>>(getUrl, headers);
+            Assert.AreEqual(200, (int)restResponse.StatusCode);
+            Assert.IsNotNull(restResponse1.Data, "Content is Null/Empty");
+
+            var actual = File.ReadAllText(Directory.GetCurrentDirectory() + "/Resource/Get/getall.json");
+
+            AssertJson.AreEquals(restResponse.Content, actual);
+
+        }
+
         [TestMethod]
         public void TestSecureGet()
         {
