@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
 using RestSharp.Authenticators;
 using RestSharpAutomation.HelperClass.Request;
+using RestSharpAutomation.ReportAttribute;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,6 +22,7 @@ namespace RestSharpAutomation.RestGetEndPoint
         private string secureGet = "http://localhost:8080/laptop-bag/webapi/secure/all";
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestGetUsingRestSharp()
         {
             IRestClient restClient = new RestClient();
@@ -40,6 +42,7 @@ namespace RestSharpAutomation.RestGetEndPoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestGetInXmlFormat()
         {
             IRestClient restClient = new RestClient();
@@ -56,6 +59,7 @@ namespace RestSharpAutomation.RestGetEndPoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestGetInJsonFormat()
         {
             IRestClient restClient = new RestClient();
@@ -71,8 +75,9 @@ namespace RestSharpAutomation.RestGetEndPoint
 
         }
 
-       [TestMethod]
-       public void TestGetWithJson_Deserialize()
+        [TestMethod]
+        //[TestMethodWithReport]
+        public void TestGetWithJson_Deserialize()
        {
             IRestClient restClient = new RestClient();
             IRestRequest restRequest = new RestRequest(getUrl);
@@ -104,6 +109,7 @@ namespace RestSharpAutomation.RestGetEndPoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestGetWithXml_Deserialize()
         {
             IRestClient restClient = new RestClient();
@@ -139,6 +145,7 @@ namespace RestSharpAutomation.RestGetEndPoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestGetWithExecute()
         {
             IRestClient restClient = new RestClient();
@@ -155,8 +162,9 @@ namespace RestSharpAutomation.RestGetEndPoint
             Assert.AreEqual(200, (int)restResponse.StatusCode);
             Assert.IsNotNull(restResponse.Data, "Response is null");
         }
-        
+
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestGetWithXMLUsingHelperClass()
         {
             Dictionary<string, string> headers = new Dictionary<string, string>()
@@ -176,6 +184,7 @@ namespace RestSharpAutomation.RestGetEndPoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestGetWithJsonUsingHelperClass()
         {
             Dictionary<string, string> headers = new Dictionary<string, string>()
@@ -195,6 +204,7 @@ namespace RestSharpAutomation.RestGetEndPoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestGetAndAssertLongJson()
         {
             Dictionary<string, string> headers = new Dictionary<string, string>()
@@ -219,6 +229,7 @@ namespace RestSharpAutomation.RestGetEndPoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestSecureGet()
         {
             IRestClient client = new RestClient();
