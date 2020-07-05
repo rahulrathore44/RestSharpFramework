@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace RestSharpAutomation.ReportAttribute
@@ -13,9 +14,10 @@ namespace RestSharpAutomation.ReportAttribute
      2. Overirde the Execute method to provide the implementation
      3. Use the custom attribute with testmethod
      */
-
+    [AttributeUsage(AttributeTargets.Method,AllowMultiple = false)]
     public class TestMethodWithReport : TestMethodAttribute
     {
+        private readonly object syslock = new object();
         public override TestResult[] Execute(ITestMethod testMethod)
         {
             var name = testMethod.TestClassName + "." + testMethod.TestMethodName;
@@ -25,7 +27,10 @@ namespace RestSharpAutomation.ReportAttribute
             var errormsg = execution?.TestFailureException?.Message;
             var trace = execution?.TestFailureException?.StackTrace;
 
-            CustomeExtentRepoter.GetInstance().AddToReport(name, "", status, errormsg + "\n" + trace);
+            lock (syslock)
+            {
+                CustomeExtentRepoter.GetInstance().AddToReport(name, "", status, errormsg + "\n" + trace);
+            }
 
             return result;
         }

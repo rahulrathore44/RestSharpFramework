@@ -2,6 +2,7 @@
 using RestSharp;
 using RestSharp.Authenticators;
 using RestSharpAutomation.HelperClass.Request;
+using RestSharpAutomation.ReportAttribute;
 using System;
 using System.Collections.Generic;
 using WebServiceAutomation.Model.XmlModel;
@@ -15,6 +16,7 @@ namespace RestSharpAutomation.RestPostEndpoint
         private Random random = new Random();
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestPostWithJsonData()
         {
             int id = random.Next(1000);
@@ -67,6 +69,7 @@ namespace RestSharpAutomation.RestPostEndpoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestPostWithModelObject()
         {
             IRestClient restClient = new RestClient();
@@ -86,6 +89,7 @@ namespace RestSharpAutomation.RestPostEndpoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestPostWithModelObject_helperClass()
         {
             Dictionary<string, string> headers = new Dictionary<string, string>()
@@ -102,6 +106,7 @@ namespace RestSharpAutomation.RestPostEndpoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestPostwithxmlData()
         {
             int id = random.Next(1000);
@@ -134,6 +139,7 @@ namespace RestSharpAutomation.RestPostEndpoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestPostwithxmlData_ComplexPayload()
         {
             int id = random.Next(1000);
@@ -168,6 +174,7 @@ namespace RestSharpAutomation.RestPostEndpoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestPostWithXml_HelperClass()
         {
             Dictionary<string, string> headers = new Dictionary<string, string>()
@@ -199,6 +206,7 @@ namespace RestSharpAutomation.RestPostEndpoint
         }
 
         [TestMethod]
+        //[TestMethodWithReport]
         public void TestVideoUpload()
         {
             IRestClient client = new RestClient();
