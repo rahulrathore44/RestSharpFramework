@@ -99,6 +99,8 @@
     <Compile Include="Helper\Request\HttpClientAsyncHelper.cs" />
     <Compile Include="Helper\Request\HttpClientHelper.cs" />
     <Compile Include="Helper\Response\ResponseDataHelper.cs" />
+    <Compile Include="JwtToken\HandlingJwtToken.cs" />
+    <Compile Include="JwtToken\RootNode.cs" />
     <Compile Include="Model\JsonModel\Features.cs" />
     <Compile Include="Model\JsonModel\JsonRootObject.cs" />
     <Compile Include="Model\RestResponse.cs" />
