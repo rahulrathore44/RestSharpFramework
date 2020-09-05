@@ -72,8 +72,8 @@
     <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
       <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.4\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -121,6 +121,7 @@
     <Compile Include="Question\Model\MileMarkups.cs" />
     <Compile Include="Question\PostFormData\TestFormData.cs" />
     <Compile Include="Question\Post\PostRequest.cs" />
+    <Compile Include="Question\Response\TestGetResponseInJson.cs" />
     <Compile Include="ReportAttribute\TestCustomAttribue.cs" />
     <Compile Include="ReportAttribute\TestMethodWithReport.cs" />
     <Compile Include="RestDeleteEndpoint\TestDeleteEndPoint.cs" />
