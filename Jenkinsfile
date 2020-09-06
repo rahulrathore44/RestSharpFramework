@@ -15,7 +15,7 @@ pipeline{
         }
         stage ('Restore Packages'){
             steps {
-                bat 'C:\\Users\\rathr1\\Downloads\\nuget.exe restore WebServiceAutomation.sln'
+                bat 'C:\\Data\\JenkinsWar\\nuget.exe restore WebServiceAutomation.sln'
             }
         }
         stage ('Build'){
