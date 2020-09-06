@@ -9,7 +9,7 @@ pipeline{
         }
         stage ('Git CheckOut'){
             steps {
-                git 'https://github.com/rahulrathore44/RestSharpFramework.git'    
+                git branch: 'feature/newversion', url: 'https://github.com/rahulrathore44/RestSharpFramework.git'    
             }
             
         }
