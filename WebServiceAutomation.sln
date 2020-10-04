@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsTestProject", "MsTestProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpAutomation", "RestSharpAutomation\RestSharpAutomation.csproj", "{B492C2AD-DB6A-471F-AF94-34397FC2427F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E1EF80F-1893-4D69-8C50-B39DF8BE39A0}"
+	ProjectSection(SolutionItems) = preProject
+		Jenkinsfile. = Jenkinsfile.
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

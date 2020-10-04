@@ -102,6 +102,7 @@
     <Compile Include="DropBoxAPI\ListFolderModel\SharingInfo.cs" />
     <Compile Include="DropBoxAPI\TestDropBoxAPI.cs" />
     <Compile Include="DropBoxAPI\TestGenerateToken.cs" />
+    <Compile Include="GraphQL\TestGraphQL.cs" />
     <Compile Include="HelperClass\Request\RestClientHelper.cs" />
     <Compile Include="JiraAPI\Request\CreateProjectPayload.cs" />
     <Compile Include="JiraAPI\Request\JiraLogin.cs" />
