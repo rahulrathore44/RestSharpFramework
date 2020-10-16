@@ -43,4 +43,3 @@ C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutom
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.csproj.CopyComplete
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.dll
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.pdb
-C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.csprojAssemblyReference.cache
