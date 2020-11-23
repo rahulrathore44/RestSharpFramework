@@ -116,6 +116,7 @@
     <Compile Include="Jwt Token\Model\JwtToken.cs" />
     <Compile Include="Jwt Token\TestJwtToken.cs" />
     <Compile Include="QueryParameter\QueryParameter.cs" />
+    <Compile Include="Question\Attribute\TestMethodWithRetry.cs" />
     <Compile Include="Question\FileUpload\FileUpload.cs" />
     <Compile Include="Question\Model\AccessorialMarkup.cs" />
     <Compile Include="Question\Model\LdiMarkups.cs" />
