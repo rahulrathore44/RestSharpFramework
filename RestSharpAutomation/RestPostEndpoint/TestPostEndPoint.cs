@@ -90,6 +90,26 @@ namespace RestSharpAutomation.RestPostEndpoint
 
         [TestMethod]
         //[TestMethodWithReport]
+        public void TestPostWithModelObjectInXML()
+        {
+            IRestClient restClient = new RestClient();
+            IRestRequest request = new RestRequest()
+            {
+                Resource = postUrl
+            };
+
+            request.AddHeader("Content-Type", "application/xml");
+            request.AddHeader("Accept", "application/xml");
+            //request.RequestFormat = DataFormat.Json;
+            request.AddXmlBody(GetLaptopObject());
+
+            IRestResponse response = restClient.Post(request);
+            Assert.AreEqual(200, (int)response.StatusCode);
+            Console.WriteLine(response.Content);
+        }
+
+        [TestMethod]
+        //[TestMethodWithReport]
         public void TestPostWithModelObject_helperClass()
         {
             Dictionary<string, string> headers = new Dictionary<string, string>()
