@@ -27,6 +27,8 @@ C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\bin\Debug
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\obj\Debug\WebServiceAutomation.csproj.CopyComplete
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\obj\Debug\WebServiceAutomation.dll
 C:\Users\rathr1\source\repos\WebServiceAutomation\WebServiceAutomation\obj\Debug\WebServiceAutomation.pdb
+C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.csprojAssemblyReference.cache
+C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.csproj.CoreCompileInputs.cache
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -39,8 +41,6 @@ C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\bin\Debug\Newtonsoft.Json
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\bin\Debug\Newtonsoft.Json.xml
-C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.csproj.CoreCompileInputs.cache
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.csproj.CopyComplete
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.dll
 C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.pdb
-C:\Data\GitHub\RestSharpFramework\WebServiceAutomation\obj\Debug\WebServiceAutomation.csprojAssemblyReference.cache

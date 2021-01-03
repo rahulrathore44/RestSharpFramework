@@ -40,6 +40,7 @@ C:\Data\GitHub\RestSharpFramework\MsTestProject\bin\Debug\Newtonsoft.Json.dll
 C:\Data\GitHub\RestSharpFramework\MsTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Data\GitHub\RestSharpFramework\MsTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Data\GitHub\RestSharpFramework\MsTestProject\bin\Debug\Newtonsoft.Json.xml
+C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.csprojAssemblyReference.cache
 C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.csproj.CoreCompileInputs.cache
 C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.csproj.CopyComplete
 C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.dll

@@ -17,6 +17,8 @@ C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\obj\Debug\
 C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\obj\Debug\RestSharpAutomation.csproj.CopyComplete
 C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\obj\Debug\RestSharpAutomation.dll
 C:\Users\rathr1\source\repos\WebServiceAutomation\RestSharpAutomation\obj\Debug\RestSharpAutomation.pdb
+C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.csprojAssemblyReference.cache
+C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.csproj.CoreCompileInputs.cache
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -51,8 +53,6 @@ C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\nunit.framework.
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\RazorEngine.xml
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\RestSharp.xml
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\bin\Debug\System.Web.Razor.xml
-C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.csprojAssemblyReference.cache
-C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.csproj.CoreCompileInputs.cache
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.csproj.CopyComplete
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.dll
 C:\Data\GitHub\RestSharpFramework\RestSharpAutomation\obj\Debug\RestSharpAutomation.pdb
