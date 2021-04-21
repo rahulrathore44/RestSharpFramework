@@ -44,3 +44,4 @@ C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.csproj.C
 C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.csproj.CopyComplete
 C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.dll
 C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.pdb
+C:\Data\GitHub\RestSharpFramework\MsTestProject\obj\Debug\MsTestProject.csprojAssemblyReference.cache
