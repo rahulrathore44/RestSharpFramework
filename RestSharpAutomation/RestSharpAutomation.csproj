@@ -115,6 +115,7 @@
     <Compile Include="Jwt Token\TestJwtToken.cs" />
     <Compile Include="QueryParameter\QueryParameter.cs" />
     <Compile Include="Question\FileUpload\FileUpload.cs" />
+    <Compile Include="Question\LargeJson\TestPostWithLargeJson.cs" />
     <Compile Include="Question\Model\AccessorialMarkup.cs" />
     <Compile Include="Question\Model\LdiMarkups.cs" />
     <Compile Include="Question\Model\MarginProfile.cs" />
