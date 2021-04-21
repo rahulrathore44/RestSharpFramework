@@ -57,3 +57,4 @@ TestResults/
 packages/
 .vs/
 **/obj/
+**/bin/
