@@ -56,4 +56,4 @@ dkms.conf
 TestResults/
 packages/
 .vs/
-
+**/obj/
