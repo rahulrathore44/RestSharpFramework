@@ -50,7 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+*.suo
 
 # Results and Package
 TestResults/
 packages/
+.vs/
+**/obj/
