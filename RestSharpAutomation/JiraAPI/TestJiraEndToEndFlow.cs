@@ -77,5 +77,19 @@ namespace RestSharpAutomation.JiraAPI
             Assert.AreEqual(201, (int)response.StatusCode);
         }
 
+        [TestMethod]
+        public void GetCurrentUser()
+        {
+            IRestRequest restRequest = new RestRequest()
+            {
+                Resource = "/rest/auth/1/session"
+            };
+            restRequest.AddCookie(LoginResponse.Data.session.name, LoginResponse.Data.session.value);
+            var response = client.Get<CurrentUser>(restRequest);
+            Assert.AreEqual(200, (int)response.StatusCode);
+            Assert.IsNotNull(response.Data);
+            Console.WriteLine(response.Content);
+        }
+
     }
 }

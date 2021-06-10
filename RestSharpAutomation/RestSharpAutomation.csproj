@@ -106,6 +106,7 @@
     <Compile Include="JiraAPI\Request\CreateProjectPayload.cs" />
     <Compile Include="JiraAPI\Request\JiraLogin.cs" />
     <Compile Include="JiraAPI\Response\CreateProjectResponse.cs" />
+    <Compile Include="JiraAPI\Response\CurrentUser.cs" />
     <Compile Include="JiraAPI\Response\LoginInfo.cs" />
     <Compile Include="JiraAPI\Response\LoginResponse.cs" />
     <Compile Include="JiraAPI\Response\Session.cs" />
@@ -115,11 +116,13 @@
     <Compile Include="Jwt Token\TestJwtToken.cs" />
     <Compile Include="QueryParameter\QueryParameter.cs" />
     <Compile Include="Question\FileUpload\FileUpload.cs" />
+    <Compile Include="Question\FileUpload\TestZamZarUpload.cs" />
     <Compile Include="Question\LargeJson\TestPostWithLargeJson.cs" />
     <Compile Include="Question\Model\AccessorialMarkup.cs" />
     <Compile Include="Question\Model\LdiMarkups.cs" />
     <Compile Include="Question\Model\MarginProfile.cs" />
     <Compile Include="Question\Model\MileMarkups.cs" />
+    <Compile Include="Question\MSLogin\UpdateAPI.cs" />
     <Compile Include="Question\PostFormData\TestFormData.cs" />
     <Compile Include="Question\Post\PostRequest.cs" />
     <Compile Include="ReportAttribute\TestCustomAttribue.cs" />
