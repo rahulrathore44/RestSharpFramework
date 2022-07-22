@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NHamcrest.Core;
 
 namespace RestSharpAutomation.JiraAPI
 {
@@ -75,6 +76,8 @@ namespace RestSharpAutomation.JiraAPI
             restRequest.AddCookie(LoginResponse.Data.session.name, LoginResponse.Data.session.value);
             var response = client.Post<CreateProjectResponse>(restRequest);
             Assert.AreEqual(201, (int)response.StatusCode);
+            
+         
         }
 
         [TestMethod]
