@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using RestSharp;
 
 namespace RestSharpLatest
 {
@@ -9,6 +9,17 @@ namespace RestSharpLatest
         [TestMethod]
         public void TestMethod1()
         {
+            /**
+             * 1. Create the client
+             * 2. Create the request
+             * 3. Send the request
+             * 4. Capture the response
+             * 5. Add the verification on the response.
+             * **/
+
+            RestClient client = new RestClient();
+            RestRequest request = new RestRequest();
+
         }
     }
 }
