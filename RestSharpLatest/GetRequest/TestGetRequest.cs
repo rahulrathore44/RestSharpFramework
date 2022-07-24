@@ -1,8 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
-using System.Diagnostics;
-using RestSharp.Serializers.Xml;
 using System.Collections.Generic;
+using System.Diagnostics;
 using WebServiceAutomation.Model.JsonModel;
 
 namespace RestSharpLatest.GetRequest
@@ -116,7 +115,42 @@ namespace RestSharpLatest.GetRequest
             }
         }
 
-      
+        [TestMethod]
+        public void GetRequestWithJsonAndDeserialize()
+        {
+            RestClient client = new RestClient();
+            RestRequest getRequest = new RestRequest(getUrl);
+            RestResponse<List<JsonRootObject>> response = client.ExecuteGet<List<JsonRootObject>>(getRequest);
+
+            Assert.AreEqual(System.Net.HttpStatusCode.OK, response.StatusCode);
+
+            if (response.IsSuccessful)
+            {
+                // Status Code
+                Debug.WriteLine($"Response Status Code - {response.StatusCode}");
+                // Content
+                Debug.WriteLine($"Response Content Size - {response.Data}");
+
+                response.Data.ForEach((item) => {
+                    Debug.WriteLine($"Response ID is - {item.Id}");
+                });
+
+                JsonRootObject jsonRootObject = response.Data.Find((item)=> {
+                    return item.Id == 12;
+                });
+
+                Assert.AreEqual("Alienware M17", jsonRootObject.LaptopName);
+                Assert.IsTrue(jsonRootObject.Features.Feature.Contains("Windows 10 Home 64-bit English"), "Element Not Present");
+                
+            }
+            else
+            {
+                // Error Message
+                Debug.WriteLine($"Error Message - {response.ErrorMessage}");
+                // Exception
+                Debug.WriteLine($"Exception - {response.ErrorException}");
+            }
+        }
 
     }
 }
