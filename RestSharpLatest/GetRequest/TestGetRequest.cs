@@ -2,7 +2,9 @@
 using RestSharp;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net;
 using WebServiceAutomation.Model.JsonModel;
+using FluentAssertions;
 
 
 namespace RestSharpLatest.GetRequest
@@ -123,7 +125,9 @@ namespace RestSharpLatest.GetRequest
             RestRequest getRequest = new RestRequest(getUrl);
             RestResponse<List<JsonRootObject>> response = client.ExecuteGet<List<JsonRootObject>>(getRequest);
 
-            Assert.AreEqual(System.Net.HttpStatusCode.OK, response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
 
             if (response.IsSuccessful)
             {
@@ -135,7 +139,20 @@ namespace RestSharpLatest.GetRequest
                 response.Data.ForEach((item) => {
                     Debug.WriteLine($"Response ID is - {item.Id}");
                 });
-                
+
+                JsonRootObject jsonRootObject = response.Data.Find((item) => {
+                    return item.Id == 1;
+                });
+
+                Assert.AreEqual("Alienware", jsonRootObject.BrandName);
+
+                jsonRootObject.BrandName.Should().NotBeEmpty();
+                jsonRootObject.BrandName.Should().Be("Alienware1");
+
+                Assert.IsTrue(jsonRootObject.Features.Feature.Contains("Windows 10 Home 64-bit English"), "Element Not Found");
+
+                jsonRootObject.Features.Feature.Should().NotBeEmpty();
+                jsonRootObject.Features.Feature.Contains("Windows 10 Home 64-bit English");
             }
             else
             {
