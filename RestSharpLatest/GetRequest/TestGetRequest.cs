@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using WebServiceAutomation.Model.JsonModel;
 
+
 namespace RestSharpLatest.GetRequest
 {
     [TestClass]
@@ -134,13 +135,6 @@ namespace RestSharpLatest.GetRequest
                 response.Data.ForEach((item) => {
                     Debug.WriteLine($"Response ID is - {item.Id}");
                 });
-
-                JsonRootObject jsonRootObject = response.Data.Find((item)=> {
-                    return item.Id == 12;
-                });
-
-                Assert.AreEqual("Alienware M17", jsonRootObject.LaptopName);
-                Assert.IsTrue(jsonRootObject.Features.Feature.Contains("Windows 10 Home 64-bit English"), "Element Not Present");
                 
             }
             else
