@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Net;
 using WebServiceAutomation.Model.JsonModel;
 using FluentAssertions;
-
+using WebServiceAutomation.Model.XmlModel;
 
 namespace RestSharpLatest.GetRequest
 {
@@ -147,12 +147,12 @@ namespace RestSharpLatest.GetRequest
                 Assert.AreEqual("Alienware", jsonRootObject.BrandName);
 
                 jsonRootObject.BrandName.Should().NotBeEmpty();
-                jsonRootObject.BrandName.Should().Be("Alienware1");
+                jsonRootObject.BrandName.Should().Be("Alienware");
 
                 Assert.IsTrue(jsonRootObject.Features.Feature.Contains("Windows 10 Home 64-bit English"), "Element Not Found");
 
                 jsonRootObject.Features.Feature.Should().NotBeEmpty();
-                jsonRootObject.Features.Feature.Contains("Windows 10 Home 64-bit English");
+                jsonRootObject.Features.Feature.Should().Contain("Windows 10 Home 64-bit English");
             }
             else
             {
@@ -162,6 +162,49 @@ namespace RestSharpLatest.GetRequest
                 Debug.WriteLine($"Exception - {response.ErrorException}");
             }
         }
+
+
+        [TestMethod]
+        public void GetRequestWithXMLAndDeserialize()
+        {
+            RestClient client = new RestClient();
+            client.UseXml();
+            RestRequest getRequest = new RestRequest(getUrl);
+            RestResponse<LaptopDetailss> response = client.ExecuteGet<LaptopDetailss>(getRequest);
+
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+            if (response.IsSuccessful)
+            {
+                // Status Code
+                Debug.WriteLine($"Response Status Code - {response.StatusCode}");
+                // Content
+                Debug.WriteLine($"Response Content Size - {response.Data.Laptop}");
+
+                response.Data.Laptop.ForEach((item) => {
+                    Debug.WriteLine($"Response ID is - {item.Id}");
+                });
+
+                Laptop rootObject = response.Data.Laptop.Find((item) => {
+                    return "1".Equals(item.Id, System.StringComparison.OrdinalIgnoreCase);
+                });
+
+
+                rootObject.BrandName.Should().NotBeEmpty();
+                rootObject.BrandName.Should().Be("Alienware");
+
+                rootObject.Features.Feature.Should().NotBeEmpty();
+                rootObject.Features.Feature.Should().Contain("Windows 10 Home 64-bit English");
+            }
+            else
+            {
+                // Error Message
+                Debug.WriteLine($"Error Message - {response.ErrorMessage}");
+                // Exception
+                Debug.WriteLine($"Exception - {response.ErrorException}");
+            }
+        }
+
 
     }
 }
