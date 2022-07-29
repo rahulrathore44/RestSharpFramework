@@ -123,6 +123,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assignment\GET Request\Assignment_Get_Request.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
