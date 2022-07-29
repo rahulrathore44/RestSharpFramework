@@ -206,5 +206,31 @@ namespace RestSharpLatest.GetRequest
         }
 
 
+        [TestMethod]
+        public void SendRequestWithExecuteAPI()
+        {
+            RestClient client = new RestClient();
+            RestRequest getRequest = new RestRequest()
+            {
+                Method = Method.Get,
+                Resource = getUrl
+            };
+
+            var response = client.Execute<List<JsonRootObject>>(getRequest);
+            var content = response.Data;
+
+            var jsonObject = content.Find((item) => {
+                return 1 == item.Id;
+            });
+
+            jsonObject.BrandName.Should().NotBeNullOrEmpty();
+            jsonObject.Id.Should().Be(1);
+
+            jsonObject.Features.Feature.Should().Contain("Windows 10 Home 64-bit English");
+
+        }
+
+               
+
     }
 }
