@@ -133,9 +133,11 @@
     <Compile Include="APIHelper\ICommand.cs" />
     <Compile Include="APIHelper\IResponse.cs" />
     <Compile Include="APIHelper\IRestApiResponse.cs" />
+    <Compile Include="APIHelper\RestApiExecutor.cs" />
     <Compile Include="Assignment\GET Request\Assignment_Get_Request.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
+    <Compile Include="GetRequest\TestGetUsingFramework.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
