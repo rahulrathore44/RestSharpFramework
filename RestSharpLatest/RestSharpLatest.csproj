@@ -123,8 +123,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIHelper\AbstractRequest.cs" />
+    <Compile Include="APIHelper\AbstractResponse.cs" />
+    <Compile Include="APIHelper\APIRequest\GetRequestBuilder.cs" />
+    <Compile Include="APIHelper\APIResponse\Response.cs" />
     <Compile Include="APIHelper\Client\DefaultClient.cs" />
+    <Compile Include="APIHelper\Command\RequestCommand.cs" />
     <Compile Include="APIHelper\IClient.cs" />
+    <Compile Include="APIHelper\ICommand.cs" />
+    <Compile Include="APIHelper\IResponse.cs" />
+    <Compile Include="APIHelper\IRestApiResponse.cs" />
     <Compile Include="Assignment\GET Request\Assignment_Get_Request.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
