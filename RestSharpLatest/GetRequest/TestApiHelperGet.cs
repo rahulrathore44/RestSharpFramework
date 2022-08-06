@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharpLatest.APIHelper;
+using RestSharpLatest.APIHelper.APIRequest;
 using RestSharpLatest.APIHelper.Client;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace RestSharpLatest.GetRequest
     public class TestApiHelperGet
     {
         private IClient _client;
+        private readonly string getUrl = "http://localhost:8081/laptop-bag/webapi/api/all";
 
         public void SetUp()
         {
@@ -20,6 +22,16 @@ namespace RestSharpLatest.GetRequest
         }
 
         
+        [TestMethod]
+        public void GetRequestWithApiHelper()
+        {
+            var headers = new Dictionary<string, string>()
+            {
+                { "Accept", "application/json"}
+            };
+            AbstractRequest abstractRequest = new GetRequestBuilder().WithUrl(getUrl).WithHeaders(headers);
+        }
+
         public void TearDown()
         {
             _client?.Dispose();
