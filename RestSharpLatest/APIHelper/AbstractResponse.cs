@@ -32,6 +32,7 @@ namespace RestSharpLatest.APIHelper
 
     public abstract class AbstractResponse<T> : IResponse<T>
     {
+
         private readonly RestResponse<T> _restResponse;
 
         public AbstractResponse(RestResponse<T> restResponse)
