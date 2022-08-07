@@ -137,7 +137,7 @@
     <Compile Include="Assignment\GET Request\Assignment_Get_Request.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
-    <Compile Include="GetRequest\TestGetUsingFramework.cs" />
+    <Compile Include="GetRequest\TestGetWithFramework.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
