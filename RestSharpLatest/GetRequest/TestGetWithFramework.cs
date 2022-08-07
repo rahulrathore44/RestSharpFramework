@@ -5,6 +5,8 @@ using RestSharpLatest.APIHelper.Client;
 using RestSharpLatest.APIHelper.Command;
 using FluentAssertions;
 using System.Diagnostics;
+using System.Collections.Generic;
+using WebServiceAutomation.Model.JsonModel;
 
 namespace RestSharpLatest.GetRequest
 {
@@ -31,6 +33,10 @@ namespace RestSharpLatest.GetRequest
             var response = executor.ExecuteRequest();
             response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
             Debug.WriteLine(response.GetResponseData());
+
+            var typeResponse =  executor.ExecuteRequest<List<JsonRootObject>>();
+            Debug.WriteLine("");
+            Debug.WriteLine(typeResponse.GetResponseData());
 
             request = new GetRequestBuilder().WithUrl("http://www.google.com");
             getCommand = new RequestCommand(request, client);
