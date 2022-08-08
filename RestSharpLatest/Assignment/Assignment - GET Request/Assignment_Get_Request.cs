@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebServiceAutomation.Model.XmlModel;
 
-namespace RestSharpLatest.Assignment.GET_Request
+namespace RestSharpLatest.Assignment.Assignment___GET_Request
 {
     [TestClass]
     public class Assignment_Get_Request
