@@ -106,6 +106,7 @@
     <Compile Include="JwtToken\RootNode.cs" />
     <Compile Include="Model\JsonModel\Features.cs" />
     <Compile Include="Model\JsonModel\JsonRootObject.cs" />
+    <Compile Include="Model\JsonModel\JsonRootObjectBuilder.cs" />
     <Compile Include="Model\RestResponse.cs" />
     <Compile Include="Model\XmlModel\Features.cs" />
     <Compile Include="Model\XmlModel\Laptop.cs" />

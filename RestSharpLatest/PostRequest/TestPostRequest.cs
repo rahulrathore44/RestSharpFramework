@@ -4,6 +4,7 @@ using System;
 using FluentAssertions;
 using System.Diagnostics;
 
+
 namespace RestSharpLatest.PostRequest
 {
     [TestClass]
@@ -45,6 +46,16 @@ namespace RestSharpLatest.PostRequest
             RestResponse response = client.ExecutePost(request);
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
             Debug.WriteLine(response.Content);
+            
+        }
+
+        [TestMethod]
+        public void TestPostRequestWithJsonObject()
+        {
+            int id = random.Next(1000);
+
+            
+
         }
     }
 }
