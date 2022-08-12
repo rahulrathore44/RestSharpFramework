@@ -134,6 +134,9 @@
     <Compile Include="APIHelper\IResponse.cs" />
     <Compile Include="APIHelper\IRestApiResponse.cs" />
     <Compile Include="APIHelper\RestApiExecutor.cs" />
+    <Compile Include="APIModel\JsonApiModel\Features.cs" />
+    <Compile Include="APIModel\JsonApiModel\JsonModel.cs" />
+    <Compile Include="APIModel\JsonApiModel\JsonModelBuilder.cs" />
     <Compile Include="Assignment\Assignment - GET Request\Assignment_Get_Request.cs" />
     <Compile Include="Assignment\GET_Request_with_De_serialization_using_FrameworkAPI\Assingment_Get_Request_Framework.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />

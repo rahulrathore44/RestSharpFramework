@@ -3,7 +3,8 @@ using RestSharp;
 using System;
 using FluentAssertions;
 using System.Diagnostics;
-
+using WebServiceAutomation.Model.JsonModel;
+using RestSharpLatest.APIModel.JsonApiModel;
 
 namespace RestSharpLatest.PostRequest
 {
@@ -54,8 +55,29 @@ namespace RestSharpLatest.PostRequest
         {
             int id = random.Next(1000);
 
-            
+            // Serialize the object into the JSON or XML representation.
+            // Add the Content - Type header.
+            //Add the serialized object to the request.
 
+            // ------ Old Model--
+            /*var payload = new JsonRootObjectBuilder().WithId(id).WithBrandName("Test BrandName").WithLaptopName("Test LaptopName").WithFeatures(new System.Collections.Generic.List<string>() { "Feature1", "Feature2" }).Build();*/
+
+
+            var payload = new JsonModelBuilder().WithId(id).WithBrandName("Test BrandName").WithLaptopName("Test LaptopName").WithFeatures(new System.Collections.Generic.List<string>() { "Feature1", "Feature2" }).Build();
+
+            // Create the Client
+            RestClient client = new RestClient();
+            // Create the Request
+            RestRequest request = new RestRequest()
+            {
+                Resource = postUrl,
+                Method = Method.Post
+            };
+
+            request.AddJsonBody(payload);
+            var response = client.ExecutePost(request);
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+            Debug.WriteLine(response.Content);
         }
     }
 }
