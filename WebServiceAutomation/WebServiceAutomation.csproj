@@ -111,6 +111,7 @@
     <Compile Include="Model\XmlModel\Features.cs" />
     <Compile Include="Model\XmlModel\Laptop.cs" />
     <Compile Include="Model\XmlModel\LaptopDetailss.cs" />
+    <Compile Include="Model\XmlModel\XmlModelBuilder.cs" />
     <Compile Include="MyTaskClass.cs" />
     <Compile Include="ParallelExecution\TestParallelExecution.cs" />
     <Compile Include="PostEndPoint\TestPostEndPoint.cs" />
