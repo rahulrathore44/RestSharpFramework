@@ -126,6 +126,7 @@
     <Compile Include="APIHelper\AbstractRequest.cs" />
     <Compile Include="APIHelper\AbstractResponse.cs" />
     <Compile Include="APIHelper\APIRequest\GetRequestBuilder.cs" />
+    <Compile Include="APIHelper\APIRequest\PostRequestBuilder.cs" />
     <Compile Include="APIHelper\APIResponse\Response.cs" />
     <Compile Include="APIHelper\Client\DefaultClient.cs" />
     <Compile Include="APIHelper\Command\RequestCommand.cs" />
