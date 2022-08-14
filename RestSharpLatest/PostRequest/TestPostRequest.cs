@@ -161,5 +161,43 @@ namespace RestSharpLatest.PostRequest
             responseData.Features.Feature.Should().Contain("8th Generation Intel® Core™ i5-8300H");
 
         }
+
+        
+        [TestMethod]
+        public void TestPostRequestWithXML_String()
+        {
+            int id = random.Next(1000);
+
+            string xmlData = "<Laptop>" +
+                                    "<BrandName>Alienware</BrandName>" +
+                                    "<Features>" +
+                                       "<Feature>8th Generation Intel® Core™ i5 - 8300H</Feature>" +
+                                       "<Feature>Windows 10 Home 64 - bit English</Feature>" +
+                                       "<Feature>NVIDIA® GeForce® GTX 1660 Ti 6GB GDDR6</Feature>" +
+                                       "<Feature>8GB, 2x4GB, DDR4, 2666MHz</Feature>" +
+                                     "</Features>" +
+                                  "<Id> " + id + "</Id>" +
+                                  "<LaptopName>Alienware M17</LaptopName>" +
+                               "</Laptop>";
+
+
+            // Create the Client
+            RestClient client = new RestClient();
+            // Create the Request
+            RestRequest request = new RestRequest()
+            {
+                Resource = postUrl,
+                Method = Method.Post
+            };
+
+            request.AddStringBody(xmlData, DataFormat.Xml);
+            request.AddHeader("Accept", "application/xml");
+
+            var response = client.ExecutePost(request);
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+            Debug.WriteLine(response.Content);
+            client.Dispose();
+        }
+
     }
 }

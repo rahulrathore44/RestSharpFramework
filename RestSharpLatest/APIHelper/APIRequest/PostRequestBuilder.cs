@@ -56,6 +56,7 @@ namespace RestSharpLatest.APIHelper.APIRequest
                     _restRequest.AddJsonBody<T>(body);
                     break;
                 case RequestBodyType.XML:
+                    _restRequest.AddXmlBody<T>(body);
                     break;
             }
             return this;
