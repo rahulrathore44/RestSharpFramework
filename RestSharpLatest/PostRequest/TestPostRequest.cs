@@ -9,6 +9,9 @@ using RestSharpLatest.APIHelper;
 using RestSharpLatest.APIHelper.Client;
 using RestSharpLatest.APIHelper.APIRequest;
 using RestSharpLatest.APIHelper.Command;
+using WebServiceAutomation.Model.XmlModel;
+using System.Collections.Generic;
+using RestSharp.Serializers;
 
 namespace RestSharpLatest.PostRequest
 {
@@ -162,7 +165,7 @@ namespace RestSharpLatest.PostRequest
 
         }
 
-        
+
         [TestMethod]
         public void TestPostRequestWithXML_String()
         {
@@ -197,6 +200,67 @@ namespace RestSharpLatest.PostRequest
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
             Debug.WriteLine(response.Content);
             client.Dispose();
+        }
+
+        [TestMethod]
+        public void TestPostRequestWithFramework_XML()
+        {
+            int id = random.Next(1000);
+            var xmlPayLoad = new XmlModelBuilder().WithId(id).WithBrandName("Test Brand Name").WithFeatures(new List<string>() { "Feature1", "Feature2" }).WithLaptopName("Test Laptop Name").Build();
+
+            // Post Request
+
+            var request = new PostRequestBuilder().WithUrl(postUrl).WithBody<Laptop>(xmlPayLoad, RequestBodyType.XML).WithHeaders(new Dictionary<string, string>() { { "Accept", "application/xml" } });
+
+            // Command
+
+            var command = new RequestCommand(request, _client);
+            // SetCommand
+
+            _executor.SetCommand(command);
+            // Execute the request
+            var response = _executor.ExecuteRequest();
+            response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+            response.GetResponseData().Should().Contain("Test Laptop Name");
+        }
+
+        [TestMethod]
+        public void TestPostRequestWithFrameworkXML_String()
+        {
+            int id = random.Next(1000);
+
+            string xmlData = "<Laptop>" +
+                                    "<BrandName>Alienware</BrandName>" +
+                                    "<Features>" +
+                                       "<Feature>8th Generation Intel® Core™ i5 - 8300H</Feature>" +
+                                       "<Feature>Windows 10 Home 64 - bit English</Feature>" +
+                                       "<Feature>NVIDIA® GeForce® GTX 1660 Ti 6GB GDDR6</Feature>" +
+                                       "<Feature>8GB, 2x4GB, DDR4, 2666MHz</Feature>" +
+                                     "</Features>" +
+                                  "<Id> " + id + "</Id>" +
+                                  "<LaptopName>Alienware M17</LaptopName>" +
+                               "</Laptop>";
+
+            // Post Request
+
+            var request = new PostRequestBuilder().WithUrl(postUrl).WithBody<string>(xmlData, RequestBodyType.STRING, ContentType.Xml).WithHeaders(new Dictionary<string, string>() { { "Accept", "application/xml" } });
+
+            // Command
+
+            var command = new RequestCommand(request, _client);
+            // SetCommand
+
+            _executor.SetCommand(command);
+            // Execute the request
+            var response = _executor.ExecuteRequest();
+            response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+            response.GetResponseData().Should().Contain("8th Generation Intel® Core™ i5 - 8300H");
+
+            var responseType = _executor.ExecuteRequest<Laptop>();
+            responseType.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+            var responseData = responseType.GetResponseData();
+            responseData.Features.Feature.Should().Contain("8th Generation Intel® Core™ i5 - 8300H");
+
         }
 
     }
