@@ -17,6 +17,7 @@ namespace RestSharpLatest.APIHelper.Client
         public TracerClient()
         {
             _restClientOptions = new RestClientOptions();
+
         }
 
         public void Dispose()
@@ -26,10 +27,18 @@ namespace RestSharpLatest.APIHelper.Client
 
         public RestClient GetClient()
         {
+            //_restClientOptions.ConfigureMessageHandler = TraceConfig;
+            /*_restClientOptions.ConfigureMessageHandler = (handler) =>
+            {
+                var tracer = new HttpTracerHandler(handler, HttpMessageParts.All);
+                return tracer;
+            };*/
+
             _restClientOptions.ConfigureMessageHandler = (handler) =>
             {
                 return new HttpTracerHandler(handler, HttpMessageParts.All);
             };
+
             _restClientOptions.ThrowOnDeserializationError = true;
             _restClient = new RestClient(_restClientOptions);
             return _restClient;

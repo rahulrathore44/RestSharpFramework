@@ -16,7 +16,7 @@ using RestSharp.Serializers;
 namespace RestSharpLatest.PostRequest
 {
     [TestClass]
-    public class TestPostRequestWithTracer
+    public class TestPostWithTracerClient
     {
         private string postUrl = "http://localhost:8081/laptop-bag/webapi/api/add";
         private Random random = new Random();
@@ -262,5 +262,7 @@ namespace RestSharpLatest.PostRequest
             responseData.Features.Feature.Should().Contain("8th Generation Intel® Core™ i5 - 8300H");
 
         }
+
+
     }
 }
