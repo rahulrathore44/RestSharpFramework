@@ -42,6 +42,9 @@
     <Reference Include="FluentAssertions, Version=6.5.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentAssertions.6.5.1\lib\net47\FluentAssertions.dll</HintPath>
     </Reference>
+    <Reference Include="HttpTracer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HttpTracer.2.1.1\lib\netstandard2.0\HttpTracer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -129,6 +132,7 @@
     <Compile Include="APIHelper\APIRequest\PostRequestBuilder.cs" />
     <Compile Include="APIHelper\APIResponse\Response.cs" />
     <Compile Include="APIHelper\Client\DefaultClient.cs" />
+    <Compile Include="APIHelper\Client\TracerClient.cs" />
     <Compile Include="APIHelper\Command\RequestCommand.cs" />
     <Compile Include="APIHelper\IClient.cs" />
     <Compile Include="APIHelper\ICommand.cs" />
@@ -144,6 +148,7 @@
     <Compile Include="GetRequest\TestGetRequest.cs" />
     <Compile Include="GetRequest\TestGetWithFramework.cs" />
     <Compile Include="PostRequest\TestPostRequest.cs" />
+    <Compile Include="PostRequest\TestPostRequestWithTracer.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
