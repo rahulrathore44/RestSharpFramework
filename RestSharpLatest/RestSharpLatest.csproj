@@ -154,6 +154,7 @@
     <Compile Include="PostRequest\TestMockAbleIo.cs" />
     <Compile Include="PostRequest\TestPostRequest.cs" />
     <Compile Include="PostRequest\TestPostWithTracerClient.cs" />
+    <Compile Include="PutRequest\TestPutRequest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
