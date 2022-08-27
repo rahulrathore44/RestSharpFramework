@@ -42,7 +42,6 @@ namespace RestSharpLatest.APIHelper.Client
 
             _restClientOptions.ThrowOnDeserializationError = true;
             _restClient = new RestClient(_restClientOptions);
-            _restClient.Authenticator = AuthenticatorBase
             return _restClient;
         }
 
