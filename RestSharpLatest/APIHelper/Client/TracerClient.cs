@@ -1,5 +1,6 @@
 ﻿using HttpTracer;
 using RestSharp;
+using RestSharp.Authenticators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,7 @@ namespace RestSharpLatest.APIHelper.Client
 
             _restClientOptions.ThrowOnDeserializationError = true;
             _restClient = new RestClient(_restClientOptions);
+            _restClient.Authenticator = AuthenticatorBase
             return _restClient;
         }
 

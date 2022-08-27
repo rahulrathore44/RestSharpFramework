@@ -133,6 +133,7 @@
     <Compile Include="APIHelper\AbstractResponse.cs" />
     <Compile Include="APIHelper\APIRequest\GetRequestBuilder.cs" />
     <Compile Include="APIHelper\APIRequest\PostRequestBuilder.cs" />
+    <Compile Include="APIHelper\APIRequest\PutRequestBuilder.cs" />
     <Compile Include="APIHelper\APIResponse\Response.cs" />
     <Compile Include="APIHelper\Client\DefaultClient.cs" />
     <Compile Include="APIHelper\Client\TracerClient.cs" />
