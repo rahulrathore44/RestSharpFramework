@@ -1,8 +1,13 @@
 ﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
+using RestSharpLatest.APIHelper;
+using RestSharpLatest.APIHelper.APIRequest;
+using RestSharpLatest.APIHelper.Client;
+using RestSharpLatest.APIHelper.Command;
 using System;
-
+using System.Collections.Generic;
+using WebServiceAutomation.Model.XmlModel;
 
 namespace RestSharpLatest.DeleteRequest
 {
@@ -17,6 +22,21 @@ namespace RestSharpLatest.DeleteRequest
         private readonly string DeleteUrl = "http://localhost:8081/laptop-bag/webapi/api/delete/";
         private readonly string GetUrl = "http://localhost:8081/laptop-bag/webapi/api/find/";
         private readonly Random random = new Random();
+        private static IClient Client;
+        private static RestApiExecutor apiExecutor;
+
+        [ClassInitialize]
+        public static void Setup(TestContext testContext)
+        {
+            Client = new TracerClient();
+            apiExecutor = new RestApiExecutor();
+        }
+
+        [ClassCleanup]
+        public static void TearDown()
+        {
+            Client?.Dispose();
+        }
 
         [TestMethod]
         public void TestDeleteRequestWithId()
@@ -74,6 +94,36 @@ namespace RestSharpLatest.DeleteRequest
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
 
             client?.Dispose();
+        }
+
+        [TestMethod]
+        public void TestDeleteRequestWithFramework()
+        {
+            int id = random.Next(1000);
+
+            var xmlrequestBody = new XmlModelBuilder().WithId(id).WithBrandName("Test BrandName").WithLaptopName("Test LaptopName").WithFeatures(new List<string>() { "One", "Two" }).Build();
+
+            var postrequest = new PostRequestBuilder().WithUrl(PostUrl).WithBody(xmlrequestBody, RequestBodyType.XML);
+
+            var command = new RequestCommand(postrequest, Client);
+            apiExecutor.SetCommand(command);
+            var response = apiExecutor.ExecuteRequest();
+            response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+
+            var deleterequest = new DeleteRequestBuilder().WithDefaultHeaders().WithUrl(DeleteUrl + id);
+
+            command = new RequestCommand(deleterequest, Client);
+            apiExecutor.SetCommand(command);
+            response = apiExecutor.ExecuteRequest();
+            response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+
+            var getrequest = new GetRequestBuilder().WithUrl(GetUrl + id);
+            command = new RequestCommand(getrequest, Client);
+            apiExecutor.SetCommand(command);
+            response = apiExecutor.ExecuteRequest();
+            response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.NotFound);
+
+
         }
         
     }

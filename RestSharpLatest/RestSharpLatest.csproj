@@ -131,6 +131,7 @@
   <ItemGroup>
     <Compile Include="APIHelper\AbstractRequest.cs" />
     <Compile Include="APIHelper\AbstractResponse.cs" />
+    <Compile Include="APIHelper\APIRequest\DeleteRequestBuilder.cs" />
     <Compile Include="APIHelper\APIRequest\GetRequestBuilder.cs" />
     <Compile Include="APIHelper\APIRequest\PostRequestBuilder.cs" />
     <Compile Include="APIHelper\APIRequest\PutRequestBuilder.cs" />
