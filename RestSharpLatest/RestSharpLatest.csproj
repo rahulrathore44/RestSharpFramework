@@ -150,6 +150,7 @@
     <Compile Include="Assignment\Assignment - GET Request\Assignment_Get_Request.cs" />
     <Compile Include="Assignment\GET_Request_with_De_serialization_using_FrameworkAPI\Assingment_Get_Request_Framework.cs" />
     <Compile Include="Assignment\POST_Request_with_De_serialization_of_XML_response_body\Assignment_POST_Request_with_De-serialization_XML_body.cs" />
+    <Compile Include="Assignment\PUT_Request_with_XML_body\Assignment_PUT_Request_with_XML_body.cs" />
     <Compile Include="DeleteRequest\TestDeleteRequest.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
