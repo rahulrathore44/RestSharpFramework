@@ -44,5 +44,12 @@ namespace RestSharpLatest.APIHelper.APIRequest
         {
             restRequest.AddOrUpdateHeader("Accept", "text/plain");
         }
+
+        //QueryParameter
+        public DeleteRequestBuilder WithQueryParameters(Dictionary<string, string> parameters)
+        {
+            WithQueryParameters(parameters, _restRequest);
+            return this;
+        }
     }
 }

@@ -62,6 +62,22 @@ namespace RestSharpLatest.APIHelper.APIRequest
             return this;
         }
 
+        //QueryParameter
+        public PostRequestBuilder WithQueryParameters(Dictionary<string, string> parameters)
+        {
+            WithQueryParameters(parameters, _restRequest);
+            return this;
+        }
+
+
+        protected override void WithQueryParameters(Dictionary<string, string> parameters, RestRequest restRequest)
+        {
+            foreach (string key in parameters.Keys)
+            {
+                restRequest.AddQueryParameter(key, parameters[key]);
+            }
+        }
+
     }
 
     public enum RequestBodyType

@@ -39,6 +39,13 @@ namespace RestSharpLatest.APIHelper.APIRequest
             WithHeaders(headers, _restRequest);
             return this;
         }
-       
+
+        //QueryParameter
+        public GetRequestBuilder WithQueryParameters(Dictionary<string, string> parameters)
+        {
+            WithQueryParameters(parameters, _restRequest);
+            return this;
+        }
+
     }
 }

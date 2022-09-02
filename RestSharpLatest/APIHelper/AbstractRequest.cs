@@ -28,6 +28,14 @@ namespace RestSharpLatest.APIHelper
 
         //
         //QueryParameter
+
+        protected virtual void WithQueryParameters(Dictionary<string, string> parameters, RestRequest restRequest)
+        {
+            foreach (string key in parameters.Keys)
+            {
+                restRequest.AddParameter(key, parameters[key]);
+            }
+        }
         // URL Segments
     }
 }
