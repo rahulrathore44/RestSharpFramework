@@ -1,12 +1,17 @@
 ﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
+using RestSharpLatest.APIHelper;
+using RestSharpLatest.APIHelper.APIRequest;
+using RestSharpLatest.APIHelper.Client;
+using RestSharpLatest.APIHelper.Command;
 using RestSharpLatest.APIModel.JsonApiModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebServiceAutomation.Model.XmlModel;
 
 namespace RestSharpLatest.QueryParameters
 {
@@ -16,6 +21,22 @@ namespace RestSharpLatest.QueryParameters
         private string PostUrl = "http://localhost:8081/laptop-bag/webapi/api/add";
         private string QueryUrl = "http://localhost:8081/laptop-bag/webapi/api/query";
         private Random random = new Random();
+
+        private static IClient _client;
+        private static RestApiExecutor _executor;
+
+        [ClassInitialize]
+        public static void Setup(TestContext testContext)
+        {
+            _client = new TracerClient();
+            _executor = new RestApiExecutor();
+        }
+
+        [ClassCleanup]
+        public static void TearDown()
+        {
+            _client?.Dispose();
+        }
 
         // POST - Create an entry in the Test Application.
         // GET With query param - To fetch the created entry.
@@ -68,6 +89,41 @@ namespace RestSharpLatest.QueryParameters
             getresponse.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
             getresponse.Data.Id.Should().Be(id);
             getresponse.Data.LaptopName.Should().Be("Alienware M17");
+        }
+
+        [TestMethod]
+        public void TestGetWithQueryParams_Framework()
+        {
+            int id = random.Next(1000);
+            var payload = new JsonModelBuilder().WithId(id).WithBrandName("Test BrandName").WithLaptopName("Test LaptopName").WithFeatures(new List<string>() { "Feature1", "Feature2" }).Build();
+
+            // Post Request
+
+            var request = new PostRequestBuilder().WithUrl(PostUrl).WithBody<JsonModel>(payload, RequestBodyType.JSON);
+
+            // Command
+
+            var command = new RequestCommand(request, _client);
+            // SetCommand
+
+            _executor.SetCommand(command);
+            // Execute the request
+            var response = _executor.ExecuteRequest();
+            response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+
+            var getrequest = new GetRequestBuilder().WithUrl(QueryUrl).WithHeaders(new Dictionary<string, string>() { { "Accept","application/xml"} }).WithQueryParameters(new Dictionary<string, string>() { {"id", id.ToString()},{ "laptopName", "Test LaptopName" } });
+
+            // Command
+
+            command = new RequestCommand(getrequest, _client);
+            // SetCommand
+
+            _executor.SetCommand(command);
+            // Execute the request
+            var getresponse = _executor.ExecuteRequest<Laptop>();
+            getresponse.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+            getresponse.GetResponseData().Id.Should().Be(id.ToString());
+            getresponse.GetResponseData().LaptopName.Should().Be("Test LaptopName");
         }
     }
 }
