@@ -154,6 +154,7 @@
     <Compile Include="DeleteRequest\TestDeleteRequest.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
+    <Compile Include="GetRequest\TestGetRequestSecure.cs" />
     <Compile Include="GetRequest\TestGetWithFramework.cs" />
     <Compile Include="PostRequest\TestMockAbleIo.cs" />
     <Compile Include="PostRequest\TestPostRequest.cs" />
