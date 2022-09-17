@@ -154,6 +154,13 @@
     <Compile Include="Assignment\POST_Request_with_De_serialization_of_XML_response_body\Assignment_POST_Request_with_De-serialization_XML_body.cs" />
     <Compile Include="Assignment\PUT_Request_with_XML_body\Assignment_PUT_Request_with_XML_body.cs" />
     <Compile Include="DeleteRequest\TestDeleteRequest.cs" />
+    <Compile Include="DropBox\ListFilesAndFolder.cs" />
+    <Compile Include="DropBox\Model\Entry.cs" />
+    <Compile Include="DropBox\Model\Field.cs" />
+    <Compile Include="DropBox\Model\FileLockInfo.cs" />
+    <Compile Include="DropBox\Model\PropertyGroup.cs" />
+    <Compile Include="DropBox\Model\Root.cs" />
+    <Compile Include="DropBox\Model\SharingInfo.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
     <Compile Include="GetRequest\TestGetRequestSecure.cs" />
