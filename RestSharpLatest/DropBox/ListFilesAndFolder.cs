@@ -19,7 +19,7 @@ namespace RestSharpLatest.DropBox
     public class ListFilesAndFolder
     {
         private readonly string BaseUrl = "https://api.dropboxapi.com/2";
-        private static readonly string Token = "<your token>";
+        private static readonly string Token = "<Your Token>";
 
         private static IClient client;
         private static IClient authClient;
@@ -83,5 +83,23 @@ namespace RestSharpLatest.DropBox
 
         }
         
+        [TestMethod]
+        public void CreateFolder_with_framework()
+        {
+            // request body
+            var contextPath = "/files/create_folder_v2";
+
+            var requestBody = "{\"autorename\":true,\"path\":\"/TestFolder\"}";
+            // Post request
+            var postrequest = new PostRequestBuilder().WithUrl(BaseUrl + contextPath).WithBody(requestBody, RequestBodyType.STRING);
+            // Request command
+            var command = new RequestCommand(postrequest, authClient);
+            // set the command on api executor
+            apiExecutor.SetCommand(command);
+            // execute the request
+            var response = apiExecutor.ExecuteRequest<Root>();
+            // validate the response status
+            response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+        }
     }
 }

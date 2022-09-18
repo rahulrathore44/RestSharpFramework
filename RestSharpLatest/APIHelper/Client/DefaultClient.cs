@@ -25,7 +25,8 @@ namespace RestSharpLatest.APIHelper.Client
         public RestClient GetClient()
         {
             _restClientOptions.ThrowOnDeserializationError = true;
-            _client = new RestClient(_restClientOptions);
+            if(_client == null)
+                _client = new RestClient(_restClientOptions);
             return _client;
         }
     }

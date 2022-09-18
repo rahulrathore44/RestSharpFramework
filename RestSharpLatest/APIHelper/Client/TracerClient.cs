@@ -3,6 +3,7 @@ using RestSharp;
 using RestSharp.Authenticators;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -41,7 +42,10 @@ namespace RestSharpLatest.APIHelper.Client
             };
 
             _restClientOptions.ThrowOnDeserializationError = true;
-            _restClient = new RestClient(_restClientOptions);
+            // To avoide creating one RestClient per request 
+            if (_restClient == null)
+                _restClient = new RestClient(_restClientOptions);
+
             return _restClient;
         }
 
