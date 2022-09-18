@@ -2,6 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
 using RestSharp.Authenticators;
+using RestSharpLatest.APIHelper;
+using RestSharpLatest.APIHelper.APIRequest;
+using RestSharpLatest.APIHelper.Client;
+using RestSharpLatest.APIHelper.Command;
 using RestSharpLatest.DropBox.Model;
 using System;
 using System.Collections.Generic;
@@ -14,8 +18,28 @@ namespace RestSharpLatest.DropBox
     [TestClass]
     public class ListFilesAndFolder
     {
-        public readonly string BaseUrl = "https://api.dropboxapi.com/2";
-        public readonly string Token = "<your token>";
+        private readonly string BaseUrl = "https://api.dropboxapi.com/2";
+        private static readonly string Token = "<your token>";
+
+        private static IClient client;
+        private static IClient authClient;
+        private static RestApiExecutor apiExecutor;
+
+        [ClassInitialize]
+        public static void SetUp(TestContext testContext)
+        {
+            client = new TracerClient();
+            authClient = new AuthenticationDecorato(client, new JwtAuthenticator(Token));
+            //authClient = new AuthenticationDecorato(client, new HttpBasicAuthenticator("","")); // For Basic Auth
+            apiExecutor = new RestApiExecutor();
+
+        }
+
+        [ClassCleanup]
+        public static void TearDown()
+        {
+            authClient?.Dispose();
+        }
 
         [TestMethod]
         public void GetAllFilesAndFolder()
@@ -39,5 +63,25 @@ namespace RestSharpLatest.DropBox
             var response = client.ExecutePost<Root>(request);
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
         }
+
+        [TestMethod]
+        public void GetAllFilesAndFolder_with_Framework() {
+            // request body
+            var contextPath = "/files/list_folder";
+
+            var requestBody = "{\"include_deleted\":false,\"include_has_explicit_shared_members\":false,\"include_media_info\":false,\"include_mounted_folders\":true,\"include_non_downloadable_files\":true,\"path\":\"\",\"recursive\":false}";
+            // Post request
+            var postrequest = new PostRequestBuilder().WithUrl(BaseUrl + contextPath).WithBody(requestBody, RequestBodyType.STRING);
+            // Request command
+            var command = new RequestCommand(postrequest, authClient);
+            // set the command on api executor
+            apiExecutor.SetCommand(command);
+            // execute the request
+            var response = apiExecutor.ExecuteRequest<Root>();
+            // validate the response status
+            response.GetHttpStatusCode().Should().Be(System.Net.HttpStatusCode.OK);
+
+        }
+        
     }
 }

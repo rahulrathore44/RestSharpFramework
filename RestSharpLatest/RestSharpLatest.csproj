@@ -136,6 +136,7 @@
     <Compile Include="APIHelper\APIRequest\PostRequestBuilder.cs" />
     <Compile Include="APIHelper\APIRequest\PutRequestBuilder.cs" />
     <Compile Include="APIHelper\APIResponse\Response.cs" />
+    <Compile Include="APIHelper\Client\AuthenticationDecorato.cs" />
     <Compile Include="APIHelper\Client\BasicAuthDecorator.cs" />
     <Compile Include="APIHelper\Client\DefaultClient.cs" />
     <Compile Include="APIHelper\Client\TracerClient.cs" />
