@@ -162,6 +162,7 @@
     <Compile Include="DropBox\Model\PropertyGroup.cs" />
     <Compile Include="DropBox\Model\Root.cs" />
     <Compile Include="DropBox\Model\SharingInfo.cs" />
+    <Compile Include="DropBox\TestDownloadFile.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
     <Compile Include="GetRequest\TestGetRequestSecure.cs" />

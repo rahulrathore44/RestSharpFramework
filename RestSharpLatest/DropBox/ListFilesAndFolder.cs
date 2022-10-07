@@ -58,7 +58,6 @@ namespace RestSharpLatest.DropBox
                 Resource = BaseUrl + contextPath,
                 Method = Method.Post
             };
-
             request.AddStringBody(requestBody, DataFormat.Json);
             var response = client.ExecutePost<Root>(request);
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
