@@ -51,15 +51,14 @@ namespace RestSharpLatest.Assignment.POST_Request_with_De_serialization_of_XML_r
 
             // Validate the status code.
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-            client.Dispose();
-
+            
             // Validate the BrandName property.
             response.Data.BrandName.Should().NotBeNull();
             // Validate the LaptopName property.
             response.Data.LaptopName.Should().NotBeNull();
 
             // Release the resource acquired by the client.
-            client?.Dispose();
+            client.Dispose();
         }
     }
 }
