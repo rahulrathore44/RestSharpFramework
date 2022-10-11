@@ -10,5 +10,7 @@ namespace RestSharpLatest.APIHelper
     {
         IResponse ExecuteRequest(); // for response in string format
         IResponse<T> ExecuteRequest<T>(); // for the de-serialize object from response
+        byte[] DownloadData();
+        Task<byte[]> DownloadDataAsync();
     }
 }

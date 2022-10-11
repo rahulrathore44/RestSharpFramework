@@ -47,7 +47,7 @@ namespace RestSharpLatest.DropBox
             var fileNameOne = "Video.mp4";
             var locationOne = "{\"path\":\"/" + fileNameOne + "\"}";
 
-            var fileNameTwo = "Video.mp4";
+            var fileNameTwo = "Part1.mp3";
             var locationTwo = "{\"path\":\"/" + fileNameTwo + "\"}";
 
             var client = new RestClient()

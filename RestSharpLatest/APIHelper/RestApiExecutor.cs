@@ -24,5 +24,15 @@ namespace RestSharpLatest.APIHelper
         {
             return Command.ExecuteRequest<T>();
         }
+
+        public byte[] DownloadData()
+        {
+            return Command.DownloadData();
+        }
+
+        public Task<byte[]> DownloadDataAsync()
+        {
+            return Command.DownloadDataAsync();
+        }
     }
 }

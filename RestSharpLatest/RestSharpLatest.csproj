@@ -140,6 +140,7 @@
     <Compile Include="APIHelper\Client\BasicAuthDecorator.cs" />
     <Compile Include="APIHelper\Client\DefaultClient.cs" />
     <Compile Include="APIHelper\Client\TracerClient.cs" />
+    <Compile Include="APIHelper\Command\DownloadRequestCommand.cs" />
     <Compile Include="APIHelper\Command\RequestCommand.cs" />
     <Compile Include="APIHelper\IClient.cs" />
     <Compile Include="APIHelper\ICommand.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="DropBox\Model\Root.cs" />
     <Compile Include="DropBox\Model\SharingInfo.cs" />
     <Compile Include="DropBox\TestDownloadFile.cs" />
+    <Compile Include="DropBox\TestFileDownloadUsingFramework.cs" />
     <Compile Include="GetRequest\TestApiHelperGet.cs" />
     <Compile Include="GetRequest\TestGetRequest.cs" />
     <Compile Include="GetRequest\TestGetRequestSecure.cs" />

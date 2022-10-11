@@ -1,5 +1,6 @@
 ﻿using RestSharpLatest.APIHelper.APIResponse;
 using RestSharp;
+using System.Threading.Tasks;
 
 namespace RestSharpLatest.APIHelper.Command
 {
@@ -12,6 +13,16 @@ namespace RestSharpLatest.APIHelper.Command
         {
             _abstractRequest = abstractRequest;
             _client = client;
+        }
+
+        public byte[] DownloadData()
+        {
+            throw new System.NotImplementedException("Use the Download Command for File Downlaod");
+        }
+
+        public Task<byte[]> DownloadDataAsync()
+        {
+            throw new System.NotImplementedException("Use the Download Command for File Downlaod");
         }
 
         public IResponse ExecuteRequest()
