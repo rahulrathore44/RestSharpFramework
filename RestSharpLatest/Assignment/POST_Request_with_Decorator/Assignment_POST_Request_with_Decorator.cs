@@ -23,7 +23,7 @@ namespace RestSharpLatest.Assignment.POST_Request_with_Decorator
         [ClassInitialize]
         public static void Setup(TestContext testContext)
         {
-            // Invok the decorator with the tracer client impl
+            // Invoke the decorator with the tracer client impl
             authClient = new BasicAuthDecorator(new TracerClient());
             // Create the Executor
             apiExecutor = new RestApiExecutor();
