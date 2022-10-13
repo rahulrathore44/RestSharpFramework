@@ -69,6 +69,12 @@ namespace RestSharpLatest.APIHelper.APIRequest
             return this;
         }
 
+        //File Upload
+        public PostRequestBuilder WithFileUpload(string paramName, byte[] content, string fileName)
+        {
+            _restRequest.AddFile(paramName, content, fileName, "multipart/form-data");
+            return this;
+        }
 
         protected override void WithQueryParameters(Dictionary<string, string> parameters, RestRequest restRequest)
         {
