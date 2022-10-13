@@ -48,6 +48,7 @@ namespace RestSharpLatest.FileUpload
             var resposne = client.Execute(fileUploadRequest);
             // verify the response status code.
             resposne.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+            client.Dispose();
         }
 
         [TestMethod]
