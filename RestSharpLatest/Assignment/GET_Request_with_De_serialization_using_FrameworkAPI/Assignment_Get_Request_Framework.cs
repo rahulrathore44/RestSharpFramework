@@ -15,7 +15,7 @@ using WebServiceAutomation.Model.JsonModel;
 namespace RestSharpLatest.Assignment.GET_Request_with_De_serialization_using_FrameworkAPI
 {
     [TestClass]
-    public class Assingment_Get_Request_Framework
+    public class Assignment_Get_Request_Framework
     {
         private static IClient client;
         private static RestApiExecutor executor;

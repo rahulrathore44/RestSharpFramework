@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace RestSharpLatest.Assignment.File_Download_using_Framework
 {
     [TestClass]
-    public class Assingment_POST_File_Download_Parallel
+    public class Assignment_POST_File_Download_Parallel
     {
         private static RestApiExecutor restApiExecutor;
         private static IClient client;
