@@ -1,0 +1,10 @@
+﻿Approach 1
+	1. Create a Request for the User Registration /users/sign-up
+	2. Create a Second Request for authenticating the created user /users/authenticate
+
+Approach 2
+	1. Create a Custom Authenticator that inherit from the Authenticator Base Class 
+	(Rest Sharp Class)
+	2. In the Custom authenticator
+		2.1. Create a Request for the User Registration /users/sign-up
+		2.2. Create a Second Request for authenticating the created user /users/authenticate
