@@ -479,6 +479,7 @@
     <Compile Include="Assignment\Assignment - GET Request\Assignment_Get_Request.cs" />
     <Compile Include="Assignment\File_Download_using_Framework\Assignment_POST_File_Download_Parallel.cs" />
     <Compile Include="Assignment\File_Upload_using_RestSharp_api\Assignment_Post_File_Upload.cs" />
+    <Compile Include="Assignment\GET_Request_using_RestSharp_with_JWT\Assignment_Get_with_JWT.cs" />
     <Compile Include="Assignment\GET_Request_with_De_serialization_using_FrameworkAPI\Assignment_Get_Request_Framework.cs" />
     <Compile Include="Assignment\POST_Request_with_Decorator\Assignment_POST_Request_with_Decorator.cs" />
     <Compile Include="Assignment\POST_Request_with_De_serialization_of_XML_response_body\Assignment_POST_Request_with_De-serialization_XML_body.cs" />
