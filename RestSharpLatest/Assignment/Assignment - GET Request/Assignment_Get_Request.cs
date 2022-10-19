@@ -54,6 +54,9 @@ namespace RestSharpLatest.Assignment.Assignment___GET_Request
             // Validate the LaptopName property.
             xmlObject.LaptopName.Should().NotBeNull();
 
+            // Release the resource acquired by the client.
+            client?.Dispose();
+
         }
     }
 }
