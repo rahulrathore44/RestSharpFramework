@@ -1,12 +1,7 @@
 ﻿using FluentAssertions;
 using RestSharp;
 using RestSharpLatest.SessionBasedAuth.JiraApplication.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace RestSharpLatest.APIHelper.Client
 {
@@ -40,9 +35,11 @@ namespace RestSharpLatest.APIHelper.Client
             // 2. Ser the given object into JSON rep
             // 3. Send the Post request
             // 4. De-ser the response to a given type
+
             // Add the validation on session information present in the response
             response.session.name.Should().NotBeNullOrEmpty();
             response.session.value.Should().NotBeNullOrEmpty();
+
             // Add the session information in the form of cookie to the client
             _restClient.AddCookie(response.session.name, response.session.value, "/", "localhost");
         }
@@ -54,8 +51,10 @@ namespace RestSharpLatest.APIHelper.Client
             {
                 Resource = "/rest/auth/1/session"
             };
+
             // Send the delete request
             var response = _restClient.Delete(request);
+
             // Add the validation on the response status code.
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.NoContent);
         }
