@@ -465,11 +465,13 @@
     <Compile Include="APIHelper\Client\AuthenticationDecorato.cs" />
     <Compile Include="APIHelper\Client\BasicAuthDecorator.cs" />
     <Compile Include="APIHelper\Client\DefaultClient.cs" />
+    <Compile Include="APIHelper\Client\JiraClient.cs" />
     <Compile Include="APIHelper\Client\TracerClient.cs" />
     <Compile Include="APIHelper\Command\DownloadRequestCommand.cs" />
     <Compile Include="APIHelper\Command\RequestCommand.cs" />
     <Compile Include="APIHelper\IClient.cs" />
     <Compile Include="APIHelper\ICommand.cs" />
+    <Compile Include="APIHelper\IJiraClient.cs" />
     <Compile Include="APIHelper\IResponse.cs" />
     <Compile Include="APIHelper\IRestApiResponse.cs" />
     <Compile Include="APIHelper\RestApiExecutor.cs" />
@@ -513,6 +515,7 @@
     <Compile Include="Questions\ExtentReport\ExtentReport_Using_Framework.cs" />
     <Compile Include="ReportAttribute\TestCustomAttribue.cs" />
     <Compile Include="ReportAttribute\TestMethodWithReport.cs" />
+    <Compile Include="SessionBasedAuth\JiraApplication\Model\CreateProjectPayload.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\Model\LoginInfo.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\Model\LoginResponse.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\Model\Session.cs" />
