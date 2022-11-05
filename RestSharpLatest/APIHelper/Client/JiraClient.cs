@@ -36,6 +36,10 @@ namespace RestSharpLatest.APIHelper.Client
         {
             // Send the post request to login inside the jira application
             var response = _restClient.PostJson<IJiraUser, LoginResponse>("rest/auth/1/session", user);
+            // 1. Create a RestRequest of Type POSt
+            // 2. Ser the given object into JSON rep
+            // 3. Send the Post request
+            // 4. De-ser the response to a given type
             // Add the validation on session information present in the response
             response.session.name.Should().NotBeNullOrEmpty();
             response.session.value.Should().NotBeNullOrEmpty();
@@ -57,5 +61,18 @@ namespace RestSharpLatest.APIHelper.Client
         }
     }
 
+    public class AdminJiraUser : IJiraUser
+    {
+        [JsonPropertyName("username")]
+        public string username { get; private set; }
+        [JsonPropertyName("password")]
+        public string password { get; private set; }
+
+        public AdminJiraUser(string username, string password)
+        {
+            this.username = username;
+            this.password = password;
+        }
+    }
 }
 

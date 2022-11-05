@@ -519,6 +519,7 @@
     <Compile Include="SessionBasedAuth\JiraApplication\Model\LoginInfo.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\Model\LoginResponse.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\Model\Session.cs" />
+    <Compile Include="SessionBasedAuth\JiraApplication\TestCreateProject.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\TestJiraLogin.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
