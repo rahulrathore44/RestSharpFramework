@@ -24,7 +24,7 @@ namespace RestSharpLatest.Questions.ExtentReport
         [ClassInitialize]
         public static void Setup(TestContext testContext)
         {
-            client = new TracerClient();
+            client = new DefaultClient();
             apiExecutor = new RestApiExecutor();
         }
 
