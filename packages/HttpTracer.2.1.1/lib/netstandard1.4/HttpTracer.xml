@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HttpTracer</name>
+    </assembly>
+    <members>
+        <member name="P:HttpTracer.HttpHandlerBuilder.HttpTracerHandler">
+            <summary>
+            Underlying instance of the <see cref="T:HttpTracer.HttpHandlerBuilder"/> class.
+            </summary>
+        </member>
+        <member name="M:HttpTracer.HttpHandlerBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HttpTracer.HttpHandlerBuilder"/> class.
+            </summary>
+        </member>
+        <member name="M:HttpTracer.HttpHandlerBuilder.#ctor(HttpTracer.Logger.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HttpTracer.HttpHandlerBuilder"/> class.
+            </summary>
+            <param name="logger">Logger.</param>
+        </member>
+        <member name="M:HttpTracer.HttpHandlerBuilder.#ctor(System.Net.Http.HttpClientHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HttpTracer.HttpHandlerBuilder"/> class.
+            </summary>
+            <param name="innerHandler">HttpClientHandler.</param>
+        </member>
+        <member name="M:HttpTracer.HttpHandlerBuilder.#ctor(System.Net.Http.HttpClientHandler,HttpTracer.Logger.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HttpTracer.HttpHandlerBuilder"/> class.
+            </summary>
+            <param name="innerHandler">HttpClientHandler.</param>
+            <param name="logger">Logger.</param>
+        </member>
+        <member name="M:HttpTracer.HttpHandlerBuilder.#ctor(HttpTracer.HttpTracerHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HttpTracer.HttpHandlerBuilder"/> class.
+            </summary>
+            <param name="tracerHandler">Tracer handler.</param>
+        </member>
+        <member name="M:HttpTracer.HttpHandlerBuilder.AddHandler(System.Net.Http.DelegatingHandler)">
+            <summary>
+            Adds a <see cref="T:System.Net.Http.HttpMessageHandler"/> to the chain of handlers.
+            </summary>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HttpTracer.HttpHandlerBuilder.Build">
+            <summary>
+            Adds <see cref="T:System.Net.Http.DelegatingHandler"/> as the last link of the chain.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HttpTracer.HttpHandlerBuilder.SetHttpTracerVerbosity(HttpTracer.HttpMessageParts)">
+            <summary>
+            Sets the verbosity for the underlying <see cref="P:HttpTracer.HttpHandlerBuilder.HttpTracerHandler"/>
+            </summary>
+            <param name="verbosity"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HttpTracer.HttpTracerHandler.DefaultVerbosity">
+            <summary>
+            Default verbosity bitmask <see cref="T:HttpTracer.HttpMessageParts"/>
+            </summary>
+        </member>
+        <member name="P:HttpTracer.HttpTracerHandler.Verbosity">
+            <summary>
+            Instance verbosity bitmask, setting the instance verbosity overrides <see cref="P:HttpTracer.HttpTracerHandler.DefaultVerbosity"/> <see cref="T:HttpTracer.HttpMessageParts"/>
+            </summary>
+        </member>
+        <member name="M:HttpTracer.HttpTracerHandler.#ctor">
+            <summary> Constructs the <see cref="T:HttpTracer.HttpTracerHandler"/> with a custom <see cref="T:HttpTracer.Logger.ILogger"/> and a custom <see cref="T:System.Net.Http.HttpMessageHandler"/></summary>
+        </member>
+        <member name="M:HttpTracer.HttpTracerHandler.#ctor(System.Net.Http.HttpMessageHandler)">
+            <summary> Constructs the <see cref="T:HttpTracer.HttpTracerHandler"/> with a custom <see cref="T:HttpTracer.Logger.ILogger"/> and a custom <see cref="T:System.Net.Http.HttpMessageHandler"/></summary>
+            <param name="handler">User defined <see cref="T:System.Net.Http.HttpMessageHandler"/></param>
+        </member>
+        <member name="M:HttpTracer.HttpTracerHandler.#ctor(HttpTracer.Logger.ILogger)">
+            <summary> Constructs the <see cref="T:HttpTracer.HttpTracerHandler"/> with a custom <see cref="T:HttpTracer.Logger.ILogger"/> and a custom <see cref="T:System.Net.Http.HttpMessageHandler"/></summary>
+            <param name="logger">User defined <see cref="T:HttpTracer.Logger.ILogger"/></param>
+        </member>
+        <member name="M:HttpTracer.HttpTracerHandler.#ctor(HttpTracer.HttpMessageParts)">
+            <summary> Constructs the <see cref="T:HttpTracer.HttpTracerHandler"/> with a custom <see cref="T:HttpTracer.Logger.ILogger"/> and a custom <see cref="T:System.Net.Http.HttpMessageHandler"/></summary>
+            <param name="verbosity">Instance verbosity bitmask, setting the instance verbosity overrides <see cref="P:HttpTracer.HttpTracerHandler.DefaultVerbosity"/>  <see cref="T:HttpTracer.HttpMessageParts"/></param>
+        </member>
+        <member name="M:HttpTracer.HttpTracerHandler.#ctor(System.Net.Http.HttpMessageHandler,HttpTracer.HttpMessageParts)">
+            <summary> Constructs the <see cref="T:HttpTracer.HttpTracerHandler"/> with a custom <see cref="T:HttpTracer.Logger.ILogger"/> and a custom <see cref="T:System.Net.Http.HttpMessageHandler"/></summary>
+            <param name="handler">User defined <see cref="T:System.Net.Http.HttpMessageHandler"/></param>
+            <param name="verbosity">Instance verbosity bitmask, setting the instance verbosity overrides <see cref="P:HttpTracer.HttpTracerHandler.DefaultVerbosity"/>  <see cref="T:HttpTracer.HttpMessageParts"/></param>
+        </member>
+        <member name="M:HttpTracer.HttpTracerHandler.#ctor(HttpTracer.Logger.ILogger,HttpTracer.HttpMessageParts)">
+            <summary> Constructs the <see cref="T:HttpTracer.HttpTracerHandler"/> with a custom <see cref="T:HttpTracer.Logger.ILogger"/> and a custom <see cref="T:System.Net.Http.HttpMessageHandler"/></summary>
+            <param name="logger">User defined <see cref="T:HttpTracer.Logger.ILogger"/></param>
+            <param name="verbosity">Instance verbosity bitmask, setting the instance verbosity overrides <see cref="P:HttpTracer.HttpTracerHandler.DefaultVerbosity"/>  <see cref="T:HttpTracer.HttpMessageParts"/></param>
+        </member>
+        <member name="M:HttpTracer.HttpTracerHandler.#ctor(System.Net.Http.HttpMessageHandler,HttpTracer.Logger.ILogger,HttpTracer.HttpMessageParts)">
+            <summary> Constructs the <see cref="T:HttpTracer.HttpTracerHandler"/> with a custom <see cref="T:HttpTracer.Logger.ILogger"/> and a custom <see cref="T:System.Net.Http.HttpMessageHandler"/></summary>
+            <param name="handler">User defined <see cref="T:System.Net.Http.HttpMessageHandler"/></param>
+            <param name="logger">User defined <see cref="T:HttpTracer.Logger.ILogger"/></param>
+            <param name="verbosity">Instance verbosity bitmask, setting the instance verbosity overrides <see cref="P:HttpTracer.HttpTracerHandler.DefaultVerbosity"/>  <see cref="T:HttpTracer.HttpMessageParts"/></param>
+        </member>
+        <member name="M:HttpTracer.Logger.CompositeLogger.#ctor(HttpTracer.Logger.ILogger[])">
+            <summary>
+            Constructs a new <see cref="T:HttpTracer.Logger.ILogger"/> that accepts one or more <see cref="T:HttpTracer.Logger.ILogger"/>s
+            </summary>
+            <param name="loggers">A collection of <see cref="T:HttpTracer.Logger.ILogger"/>s to be used when logging <see cref="N:HttpTracer"/> Trace messages</param>
+            <exception cref="T:System.ArgumentException"><see cref="!:loggers"/> cannot be null or empty. You must supply one or more</exception>
+        </member>
+        <member name="M:HttpTracer.Logger.CompositeLogger.Log(System.String)">
+            <summary>
+            Logs the Trace Message to your specified <see cref="T:HttpTracer.Logger.ILogger"/>s
+            </summary>
+            <param name="message"><see cref="N:HttpTracer"/> Trace message</param>
+        </member>
+        <member name="M:HttpTracer.Logger.ConsoleLogger.Log(System.String)">
+            <summary>
+            Logs the Trace Message to your Console
+            </summary>
+            <param name="message"><see cref="N:HttpTracer"/> Trace message</param>
+        </member>
+        <member name="M:HttpTracer.Logger.DebugLogger.Log(System.String)">
+            <summary>
+            Logs the Trace Message to your Debug Window
+            </summary>
+            <param name="message"><see cref="N:HttpTracer"/> Trace message</param>
+        </member>
+    </members>
+</doc>
