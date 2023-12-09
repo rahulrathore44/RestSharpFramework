@@ -54,7 +54,6 @@ dkms.conf
 
 # Results and Package
 TestResults/
-packages/
 .vs/
 **/obj/
 **/bin/
