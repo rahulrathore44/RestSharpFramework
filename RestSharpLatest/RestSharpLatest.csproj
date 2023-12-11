@@ -254,6 +254,9 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json.Schema, Version=3.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Schema.3.0.14\lib\net45\Newtonsoft.Json.Schema.dll</HintPath>
+    </Reference>
     <Reference Include="RazorEngine.NetCore, Version=0.0.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
       <HintPath>..\packages\RazorEngine.NetCore.2.2.6\lib\net461\RazorEngine.NetCore.dll</HintPath>
     </Reference>
@@ -527,6 +530,7 @@
     <Compile Include="Questions\ExtentReport\ExtentReport_Using_Framework.cs" />
     <Compile Include="ReportAttribute\TestCustomAttribue.cs" />
     <Compile Include="ReportAttribute\TestMethodWithReport.cs" />
+    <Compile Include="SchemaValidation\Schema\ValidateSchema.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\Model\CreateProjectPayload.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\Model\LoginInfo.cs" />
     <Compile Include="SessionBasedAuth\JiraApplication\Model\LoginResponse.cs" />
@@ -556,6 +560,9 @@
   <ItemGroup>
     <Content Include="JsonWebToken\Generate_JWT_Token.txt" />
     <Content Include="mongocrypt.dll" />
+    <Content Include="SchemaValidation\Schema\RequestBodySchema.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
