@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpAutomation", "Rest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpLatest", "RestSharpLatest\RestSharpLatest.csproj", "{D7727898-BBF8-41B5-BD92-160F8E0FC593}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpInterceptor", "HttpInterceptor\HttpInterceptor.csproj", "{43325D19-284B-474E-AE11-ABFAD62B863A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D7727898-BBF8-41B5-BD92-160F8E0FC593}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7727898-BBF8-41B5-BD92-160F8E0FC593}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7727898-BBF8-41B5-BD92-160F8E0FC593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43325D19-284B-474E-AE11-ABFAD62B863A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43325D19-284B-474E-AE11-ABFAD62B863A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43325D19-284B-474E-AE11-ABFAD62B863A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43325D19-284B-474E-AE11-ABFAD62B863A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
